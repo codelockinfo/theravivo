@@ -321,10 +321,53 @@
     },
     "nano_photonic_yfC4fx": {
       "type": "nano_photonic",
+      "blocks": {
+        "text_4wLydG": {
+          "type": "text",
+          "settings": {
+            "sectionimg": "shopify:\/\/shop_images\/Layer_1_fd6d9f87-592f-440f-9b0f-478715bca1ea.png",
+            "contenttext": "Quantum Dots"
+          }
+        },
+        "text_3rUmnN": {
+          "type": "text",
+          "settings": {
+            "sectionimg": "shopify:\/\/shop_images\/plasmonicMaterialsIcon_1.png",
+            "contenttext": "Plasmonics"
+          }
+        },
+        "text_mAjDzk": {
+          "type": "text",
+          "settings": {
+            "sectionimg": "shopify:\/\/shop_images\/Layer_1_1_111ebead-07c5-4ad0-8cb3-6609d9e0e120.png",
+            "contenttext": "Photonics Crystals"
+          }
+        },
+        "text_g3ELVc": {
+          "type": "text",
+          "settings": {
+            "contenttext": ""
+          }
+        },
+        "text_iGVcbt": {
+          "type": "text",
+          "settings": {
+            "contenttext": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_4wLydG",
+        "text_3rUmnN",
+        "text_mAjDzk",
+        "text_g3ELVc",
+        "text_iGVcbt"
+      ],
       "settings": {
-        "nanoh1": "",
-        "nanop1": "",
-        "nanop2": ""
+        "bgimg": "shopify:\/\/shop_images\/Rectangle_4.png",
+        "nanoh1": "Nano-Photonic Emission",
+        "nanop1": "Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse",
+        "nanop2": "TextNano-Emission Photonique typically refers to the study and application of light emission at the nanoscale, often involving the manipulation of photons and nanomaterials to achieve specific optical properties. This field can encompass a variety of topics, including:"
       }
     },
     "studies_section_a3NbKh": {
