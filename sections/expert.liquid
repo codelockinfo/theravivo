@@ -6,60 +6,22 @@
     <div class="mainheading">Endorsement Experts</div>
     <div class="swiper expertslider expert-slide">
       <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
         <div class="swiper-slide">
+          {% if block.settings.bgimg != blank %}
           <div class="expert_main_box">
-             <div class="expert_content_box">
-                <div class="expert_name">
-                    Dr. Ana
-                </div>
-                <div class="expert_d">
-                    dermatologists
-                </div>
-                <div class="expert_p">
-                    "Theravivo LED Mask is a groundbreaking skincare innovation that leverages the power of light therapy to rejuvenate the skin at a cellular level, offering a non-invasive solution to various skin concerns."
-                </div>
-                <div class="expert_img">
-                    <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Ellipse_5.png?v=1723630598" class="expert-img" alt="">
-                </div>
-             </div>
-          </div>
+            <div class="expert_content_box" style="background-image: url('{{ block.settings.bgimg | img_url:'master' }} ');">
+              <div class="expert_name">{{ block.settings.expertname }}</div>
+              <div class="expert_d">{{ block.settings.expertd }}</div>
+              <div class="expert_p">{{ block.settings.expert_p }}</div>
+              <div class="expert_img">
+                <img src="{{block.settings.expertimg | img_url:'master' }}" class="expert-img" alt="">
+              </div>
+            </div>
+            </div>
+          {% endif %}
         </div>
-        <div class="swiper-slide">
-           <div class="expert_main_box">
-             <div class="expert_content_box">
-                <div class="expert_name">
-                    Dr. Ana
-                </div>
-                <div class="expert_d">
-                    dermatologists
-                </div>
-                <div class="expert_p">
-                    "Theravivo LED Mask is a groundbreaking skincare innovation that leverages the power of light therapy to rejuvenate the skin at a cellular level, offering a non-invasive solution to various skin concerns."
-                </div>
-                <div class="expert_img">
-                    <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Ellipse_5.png?v=1723630598" class="expert-img" alt="">
-                </div>
-             </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-           <div class="expert_main_box">
-             <div class="expert_content_box">
-                <div class="expert_name">
-                    Dr. Ana
-                </div>
-                <div class="expert_d">
-                    dermatologists
-                </div>
-                <div class="expert_p">
-                    "Theravivo LED Mask is a groundbreaking skincare innovation that leverages the power of light therapy to rejuvenate the skin at a cellular level, offering a non-invasive solution to various skin concerns."
-                </div>
-                <div class="expert_img">
-                    <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Ellipse_5.png?v=1723630598" class="expert-img" alt="">
-                </div>
-             </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -67,13 +29,46 @@
 
 {% schema %}
 {
-  "name": "expert Section",
-  "settings": [],
-  "presets": [
-    {
-      "name": "expert Section"
-    }
-  ]
+"name": "expert Section",
+"settings": [],
+"blocks": [
+{
+"name": "Block",
+"type": "text",
+"settings": [
+{
+"type": "image_picker",
+"id": "bgimg",
+"label": "Background img"
+},
+{
+"type": "image_picker",
+"id": "expertimg",
+"label": "Dr.img"
+},
+{
+"type": "text",
+"id": "expertname",
+"label": "Dr. name"
+},
+{
+"type": "text",
+"id": "expertd",
+"label": " Dr. degery"
+},
+{
+"type": "text",
+"id": "expert_p",
+"label": " Add text"
+}
+]
+}
+],
+"presets": [
+{
+"name": "expert Section"
+}
+]
 }
 {% endschema %}
 
@@ -83,6 +78,7 @@
     background: rgb(239, 237, 233);
     background: linear-gradient(180deg, rgba(239, 237, 233, 1) 47%, rgba(255, 255, 255, 1) 100%);
   }
+
   .mainheading {
     text-align: center;
     color: #00071e;
@@ -103,17 +99,19 @@
     justify-content: center;
     align-items: center;
   }
-.expert-slide{
+
+  .expert-slide {
     padding-top: 70px;
-}
+  }
+
   /* .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   } */
-  .expert_content_box{
-    background-image:url( https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Group_20_c650b156-5b87-4868-bf9c-68b5a71b4235.png?v=1723630575);
+  .expert_content_box {
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Group_20_c650b156-5b87-4868-bf9c-68b5a71b4235.png?v=1723630575); */
     overflow: hidden;
     border-radius: 25px;
     padding: 20px;
@@ -123,32 +121,37 @@
     border: 1px solid #fff;
     transition: all 0.7s;
   }
-  .expert_content_box:hover{
+
+  .expert_content_box:hover {
     border: 1px solid #000;
   }
-  .expert_content_box .expert-img{
-       position: absolute;
-       top: -19%;
-       left: 32%;
-       right: 32%;
+
+  .expert_content_box .expert-img {
+    position: absolute;
+    top: -19%;
+    left: 32%;
+    right: 32%;
   }
-  .expert_name{
-      font-size: 24px;
-      font-weight: 600;
-      color: #00071E;
-      line-height: normal;
+
+  .expert_name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00071e;
+    line-height: normal;
   }
-  .expert_d{
+
+  .expert_d {
     font-size: 18px;
-      font-weight: 600;
-      color: #00071E;
+    font-weight: 600;
+    color: #00071e;
     margin-bottom: 15px;
   }
-  .expert_p{
+
+  .expert_p {
     font-size: 20px;
-      font-weight: 400;
-      color: #00071E;
-      line-height: 27px;
+    font-weight: 400;
+    color: #00071e;
+    line-height: 27px;
   }
 </style>
 
