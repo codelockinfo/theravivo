@@ -400,6 +400,39 @@
     },
     "expert_9Ve7DW": {
       "type": "expert",
+      "blocks": {
+        "text_Jx3Vmm": {
+          "type": "text",
+          "settings": {
+            "bgimg": "shopify:\/\/shop_images\/Group_20_c650b156-5b87-4868-bf9c-68b5a71b4235.png",
+            "expertimg": "shopify:\/\/shop_images\/Ellipse_5.png",
+            "expertname": "Dr. Ana",
+            "expertd": "dermatologists",
+            "expert_p": "\"Theravivo LED Mask is a groundbreaking skincare innovation that leverages the power of light therapy to rejuvenate the skin at a cellular level, offering a non-invasive solution to various skin concerns.\""
+          }
+        },
+        "text_iXxtWp": {
+          "type": "text",
+          "settings": {
+            "expertname": "",
+            "expertd": "",
+            "expert_p": ""
+          }
+        },
+        "text_TUKVEE": {
+          "type": "text",
+          "settings": {
+            "expertname": "",
+            "expertd": "",
+            "expert_p": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_Jx3Vmm",
+        "text_iXxtWp",
+        "text_TUKVEE"
+      ],
       "settings": {
       }
     },
