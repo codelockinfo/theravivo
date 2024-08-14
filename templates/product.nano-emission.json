@@ -374,6 +374,26 @@
     },
     "studies_section_a3NbKh": {
       "type": "studies-section",
+      "blocks": {
+        "text_4YBJXN": {
+          "type": "text",
+          "settings": {
+            "studyimg": "shopify:\/\/shop_images\/Group_40.png",
+            "contenttext": "Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet."
+          }
+        },
+        "text_WYitYb": {
+          "type": "text",
+          "settings": {
+            "studyimg": "shopify:\/\/shop_images\/Group_40.png",
+            "contenttext": "Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet."
+          }
+        }
+      },
+      "block_order": [
+        "text_4YBJXN",
+        "text_WYitYb"
+      ],
       "settings": {
         "headingtext": "The Studies"
       }
