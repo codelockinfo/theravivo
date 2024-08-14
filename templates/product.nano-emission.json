@@ -445,6 +445,11 @@
       "settings": {
       }
     },
+    "custom_imagetext_MCqppX": {
+      "type": "custom-imagetext",
+      "settings": {
+      }
+    },
     "1723120433d2b39099": {
       "type": "apps",
       "blocks": {
@@ -490,6 +495,7 @@
     "nano_photonic_yfC4fx",
     "studies_section_a3NbKh",
     "expert_9Ve7DW",
+    "custom_imagetext_MCqppX",
     "1723120433d2b39099",
     "shogun-below",
     "shogun-optimizer"
