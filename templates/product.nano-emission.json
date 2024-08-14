@@ -319,6 +319,20 @@
         "padding_bottom": 28
       }
     },
+    "nano_photonic_yfC4fx": {
+      "type": "nano_photonic",
+      "settings": {
+        "nanoh1": "",
+        "nanop1": "",
+        "nanop2": ""
+      }
+    },
+    "studies_section_a3NbKh": {
+      "type": "studies-section",
+      "settings": {
+        "headingtext": ""
+      }
+    },
     "1723120433d2b39099": {
       "type": "apps",
       "blocks": {
@@ -360,6 +374,8 @@
     "product_video_gxqnE3",
     "product_detail_faq_qefTb9",
     "related-products",
+    "nano_photonic_yfC4fx",
+    "studies_section_a3NbKh",
     "1723120433d2b39099",
     "shogun-below",
     "shogun-optimizer"
