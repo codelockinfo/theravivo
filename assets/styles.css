@@ -1,0 +1,35 @@
+.mainheading{
+    text-align:center;
+    color: #00071E;
+    font-size: 48px;
+    font-weight: bold;
+}
+.main-subheading{
+    font-family: Poppins;
+    color:#4B4B4B;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.m-10{
+    margin: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+    .mainheading{
+        font-size: 26px;
+        line-height: 27px;
+    }
+    .main-subheading{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
