@@ -450,6 +450,11 @@
       "settings": {
       }
     },
+    "your_sckin_FmEQ89": {
+      "type": "your-sckin",
+      "settings": {
+      }
+    },
     "1723120433d2b39099": {
       "type": "apps",
       "blocks": {
@@ -496,6 +501,7 @@
     "studies_section_a3NbKh",
     "expert_9Ve7DW",
     "custom_imagetext_MCqppX",
+    "your_sckin_FmEQ89",
     "1723120433d2b39099",
     "shogun-below",
     "shogun-optimizer"
