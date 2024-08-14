@@ -335,6 +335,18 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {
+      }
     }
   },
   "order": [
@@ -348,6 +360,8 @@
     "product_video_gxqnE3",
     "product_detail_faq_qefTb9",
     "related-products",
-    "1723120433d2b39099"
+    "1723120433d2b39099",
+    "shogun-below",
+    "shogun-optimizer"
   ]
 }
