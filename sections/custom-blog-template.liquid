@@ -1,0 +1,117 @@
+<div class="page-width">
+  <div class="custom-tab">
+    <h2>{{ section.settings.title }}</h2>
+    <div>
+      <ul class="tabs">
+        {% for block in section.blocks %}
+          {% if block.type == 'tab' %}
+            <li><a href="#tab-{{ forloop.index }}">{{ block.settings.tab1 }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      {% for block in section.blocks  %}
+        {% if block.type == 'tab' %}
+          <div id="tab-{{ forloop.index }}">
+            <div class="main-content">
+              {%- assign blog = blogs[block.settings.tab2] -%}
+
+              {%- if blog.articles_count > 0 -%}
+                <ul>
+                  {%- for article in blog.articles limit: 4 -%}
+                    <li>
+                      <a href="{{ article.url }}">
+                        {%- if article.image -%}
+                          {{ article | img_url: '150x150', scale: 2 | img_tag: '' }}
+                        {%- endif -%}
+                        <h2>{{ article.title }}</h2>
+                      </a>
+                      <span>
+                          By {{ article.author }}
+                        </span>
+                       <span>
+                     {{ article.published_at | date: "%B %d, %Y" }}
+                        </span>
+                      <p>
+                      {%- if article.excerpt.size > 0 -%}
+                        {{ article.excerpt }}
+                      {%- else -%}
+                        {{ article.content | strip_html | truncate: 150 }}
+                      {%- endif -%}
+                      </p>
+                      {%- if article.tags.size > 0 -%}
+                        <ul aria-label="{{ 'blogs.article.tags' }}">
+                          {%- for tag in article.tags -%}
+                            <li>
+                              <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+
+                      <ul>
+                        <li>
+                          <a href="{{ article.url }}" aria-label="Read more: {{ article.title }}">
+                            Read more
+                          </a>
+                        </li>
+
+                        {%- if blog.comments_enabled? and article.comments_count > 0 -%}
+                          <li>
+                            <a href="{{ article.url }}#comments">
+                              {{ article.comments_count }} comments
+                            </a>
+                          </li>
+                        {%- endif -%}
+                      </ul>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Blog Tab",
+  "tag": "section",
+  "class": "blog_tabs",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Tab",
+       "type": "tab",
+       "settings": [
+         {
+           "type": "text",
+           "id": "tab1",
+           "label": "Tab Heading"
+         },
+         {
+           "type": "blog",
+           "id": "tab2",
+           "label": "Blog"
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "Blog Tab"
+    }
+  ]
+}
+{% endschema %}

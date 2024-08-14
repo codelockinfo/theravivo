@@ -1,0 +1,94 @@
+{% if product.metafields.custom.video_link != blank %}
+  <div class="product_video-inner">
+  <div class="page-width">
+    <div class="content">{{ product.metafields.custom.video_heading }}</div>
+  <div class="tw-relative tw-w-full tw-h-full" data-autoplay="true" data-title="Homepage Hero Video">
+      <video class="second tw-w-full tw-h-full tw-block tw-rounded-xl tw-object-cover tw-bg-cover tw-bg-center" loop="" autoplay="false" playsinline="true" muted="" preload="metadata" poster="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/7fd12a4ccfef484b9fc6c4dbf6c9c6f3.thumbnail.0000000000.webp?v=1721890432" title="Homepage Video">
+        <source src="{{ product.metafields.custom.video_link }}" type="video/mp4" media="(min-width: 800px)">
+        <source src="{{ product.metafields.custom.video_link }}" type="video/mp4" media="(max-width: 799px)">
+        Your browser does not support the video tag.
+      </video>
+      
+    <div class="on-top">
+    <button id="play-pause1">
+    Play
+    </button>        
+    </div>
+    </div>
+  </div>
+    </div>
+{% endif %}
+<style>
+  video.second.tw-w-full.tw-h-full.tw-block.tw-rounded-xl.tw-object-cover.tw-bg-cover.tw-bg-center {
+    height: 501px;
+    text-align: center;
+}
+</style>
+<script>
+  var motionQuery = matchMedia('(prefers-reduced-motion)');
+  var btn = document.getElementById('play-pause1');
+  var videos = document.querySelectorAll('video.second');
+  var vState;
+  
+  // Mute all videos
+  videos.forEach(video => video.muted = true);
+  
+  function reducedMotionCheck() {
+  if (motionQuery.matches) {
+  btn.innerText = 'Play';
+  vState = '2';
+  videos.forEach(video => video.pause());
+  } else {
+  btn.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" class="tw-duration-150 tw-fill-cool-black group-active:tw-fill-medium-red group-hover:tw-fill-medium-red group-aria-disabled:tw-fill-cool-black group-aria-disabled:tw-opacity-50 tw-min-w-[14px] tw-min-h-[14px]">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.54998 1.44668C4.54998 1.25338 4.39328 1.09668 4.19998 1.09668C4.00668 1.09668 3.84998 1.25338 3.84998 1.44668L3.84998 12.6467C3.84998 12.84 4.00668 12.9967 4.19998 12.9967C4.39328 12.9967 4.54998 12.84 4.54998 12.6467L4.54998 1.44668ZM9.44998 1.44668C9.44998 1.25338 9.29328 1.09668 9.09998 1.09668C8.90668 1.09668 8.74998 1.25338 8.74998 1.44668L8.74998 12.6467C8.74998 12.84 8.90668 12.9967 9.09998 12.9967C9.29328 12.9967 9.44998 12.84 9.44998 12.6467L9.44998 1.44668Z"></path>
+  </svg>
+  Pause`;
+  vState = '1';
+  videos.forEach(video => video.play());
+  }
+  }
+  
+  // run on load to setup
+  reducedMotionCheck(); 
+  motionQuery.addListener(reducedMotionCheck); 
+  
+  btn.addEventListener('click', function () {
+  if (vState === '2') {
+  this.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" class="tw-duration-150 tw-fill-cool-black group-active:tw-fill-medium-red group-hover:tw-fill-medium-red group-aria-disabled:tw-fill-cool-black group-aria-disabled:tw-opacity-50 tw-min-w-[14px] tw-min-h-[14px]">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.54998 1.44668C4.54998 1.25338 4.39328 1.09668 4.19998 1.09668C4.00668 1.09668 3.84998 1.25338 3.84998 1.44668L3.84998 12.6467C3.84998 12.84 4.00668 12.9967 4.19998 12.9967C4.39328 12.9967 4.54998 12.84 4.54998 12.6467L4.54998 1.44668ZM9.44998 1.44668C9.44998 1.25338 9.29328 1.09668 9.09998 1.09668C8.90668 1.09668 8.74998 1.25338 8.74998 1.44668L8.74998 12.6467C8.74998 12.84 8.90668 12.9967 9.09998 12.9967C9.29328 12.9967 9.44998 12.84 9.44998 12.6467Z"></path>
+  </svg>
+  Pause`;
+  videos.forEach(video => video.play());
+  vState = '1';
+  } else {
+  this.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" class="tw-duration-150 tw-fill-cool-black group-active:tw-fill-medium-red group-hover:tw-fill-medium-red group-aria-disabled:tw-fill-cool-black group-aria-disabled:tw-opacity-50 tw-min-w-[14px] tw-min-h-[14px]">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2796 7.00001L2.10039 1.26298L2.10039 12.737L11.2796 7.00001ZM2.47139 0.66938C2.00516 0.377984 1.40039 0.713173 1.40039 1.26298V12.737C1.40039 13.2868 2.00515 13.622 2.47139 13.3306L11.6506 7.5936C12.0893 7.31944 12.0893 6.68057 11.6506 6.40641L2.47139 0.66938Z"></path>
+  </svg>
+  Play`;
+  videos.forEach(video => video.pause());
+  vState = '2';
+  }
+  });
+
+</script>
+
+{% schema %}
+{
+  "name": "Product Video",
+  "class": "product_video",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+   
+  ],
+  "presets": [
+    {
+      "name": "Product Video"
+    }
+  ]
+}
+{% endschema %}

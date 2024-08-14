@@ -1,0 +1,44 @@
+
+ {% if  product.metafields.custom.percentage_image != blank or product.metafields.custom.percentage_content != blank %}
+ <div class="custom-image-text-wrapper container page-width custom_image_wrapper
+
+
+" id="how_to_use">
+   {% if product.metafields.custom.percentage_content  != blank %}
+        <div class="content">
+        {{ product.metafields.custom.percentage_content | metafield_tag }} 
+        </div>
+     {% endif %}
+   {% if  product.metafields.custom.percentage_image != blank %}
+        <div class="image">
+          <img src="{{ product.metafields.custom.percentage_image  | img_url:'master'}}" />
+        </div>
+     {% endif %}
+    </div>
+   {% endif %}
+      <style>
+      .custom-image-text-wrapper.container.page-width {
+    display: flex;
+}
+
+.image img {
+    height: 500px;
+}
+    </style>
+{% schema %}
+{
+  "name": "Product Image Text",
+  "class": "image_with_text product-image-text",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+   
+  ],
+  "presets": [
+    {
+      "name": "Product Image Text"
+    }
+  ]
+}
+{% endschema %}

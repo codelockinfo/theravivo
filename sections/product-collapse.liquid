@@ -1,0 +1,715 @@
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{% if product.metafields.custom.faq_image!= blank or  product.metafields.custom.faq_heading.value != blank %}
+    <div class="custom_faq_image page-width" id="only_faq">
+          <div class="content_only grid__item">
+            {% if product.metafields.custom.faq_heading.value != blank %}
+            <div class="custom_content_wrapper">
+              {{ product.metafields.custom.faq_heading | metafield_tag }}
+            </div>
+              {% endif %}
+            {% if product.metafields.custom.first_question != blank %}
+              <div
+                class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <details
+                  id="Details-{{ block.id }}-{{ section.id }}"
+                  {% if section.settings.open_first_collapsible_row and forloop.first %}
+                    open
+                  {% endif %}
+                >
+                  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h3 class="accordion__title inline-richtext h4">
+                    {{ product.metafields.custom.first_question }}
+                    </h3>
+                    <div class="tw-flex tw-relative">
+      <svg class="open:hidden tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5031 0.833374C10.5031 0.557232 10.2793 0.333374 10.0031 0.333374C9.727 0.333374 9.50314 0.557232 9.50314 0.833374V9.50299H0.833496C0.557354 9.50299 0.333496 9.72685 0.333496 10.003C0.333496 10.2791 0.557354 10.503 0.833496 10.503H9.50314V19.1727C9.50314 19.4488 9.727 19.6727 10.0031 19.6727C10.2793 19.6727 10.5031 19.4488 10.5031 19.1727V10.503H19.1728C19.4489 10.503 19.6728 10.2791 19.6728 10.003C19.6728 9.72685 19.4489 9.50299 19.1728 9.50299H10.5031V0.833374Z" fill="#1E262A"></path>
+</svg>
+
+      <svg class="open:show tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_1448_4879)">
+    <path d="M0 10H20" stroke="#1E262A" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_1448_4879">
+      <rect width="20" height="20" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+    </div>
+                  </summary>
+                  <div
+                    class="accordion__content rte"
+                    id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                    role="region"
+                    aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                  >
+                   {{ product.metafields.custom.first_answer | metafield_tag}}
+                  </div>
+                </details>
+              </div>
+            {% endif %}
+
+            {% if product.metafields.custom.second_question != blank %}
+              <div
+                class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <details
+                  id="Details-{{ block.id }}-{{ section.id }}"
+               
+                >
+                  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h3 class="accordion__title inline-richtext h4">
+                    {{ product.metafields.custom.second_question }}
+                    </h3>
+                    <div class="tw-flex tw-relative">
+      <svg class="open:hidden tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5031 0.833374C10.5031 0.557232 10.2793 0.333374 10.0031 0.333374C9.727 0.333374 9.50314 0.557232 9.50314 0.833374V9.50299H0.833496C0.557354 9.50299 0.333496 9.72685 0.333496 10.003C0.333496 10.2791 0.557354 10.503 0.833496 10.503H9.50314V19.1727C9.50314 19.4488 9.727 19.6727 10.0031 19.6727C10.2793 19.6727 10.5031 19.4488 10.5031 19.1727V10.503H19.1728C19.4489 10.503 19.6728 10.2791 19.6728 10.003C19.6728 9.72685 19.4489 9.50299 19.1728 9.50299H10.5031V0.833374Z" fill="#1E262A"></path>
+</svg>
+
+      <svg class="open:show tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_1448_4879)">
+    <path d="M0 10H20" stroke="#1E262A" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_1448_4879">
+      <rect width="20" height="20" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+    </div>
+                  </summary>
+                  <div
+                    class="accordion__content rte"
+                    id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                    role="region"
+                    aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                  >
+                   {{ product.metafields.custom.second_answer | metafield_tag}}
+                  </div>
+                </details>
+              </div>
+            {% endif %}
+
+            {% if product.metafields.custom.third_question != blank %}
+              <div
+                class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <details
+                  id="Details-{{ block.id }}-{{ section.id }}"
+                
+                >
+                  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h3 class="accordion__title inline-richtext h4">
+                    {{ product.metafields.custom.third_question }}
+                    </h3>
+                 <div class="tw-flex tw-relative">
+      <svg class="open:hidden tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5031 0.833374C10.5031 0.557232 10.2793 0.333374 10.0031 0.333374C9.727 0.333374 9.50314 0.557232 9.50314 0.833374V9.50299H0.833496C0.557354 9.50299 0.333496 9.72685 0.333496 10.003C0.333496 10.2791 0.557354 10.503 0.833496 10.503H9.50314V19.1727C9.50314 19.4488 9.727 19.6727 10.0031 19.6727C10.2793 19.6727 10.5031 19.4488 10.5031 19.1727V10.503H19.1728C19.4489 10.503 19.6728 10.2791 19.6728 10.003C19.6728 9.72685 19.4489 9.50299 19.1728 9.50299H10.5031V0.833374Z" fill="#1E262A"></path>
+</svg>
+
+      <svg class="open:show tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_1448_4879)">
+    <path d="M0 10H20" stroke="#1E262A" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_1448_4879">
+      <rect width="20" height="20" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+    </div>
+                  </summary>
+                  <div
+                    class="accordion__content rte"
+                    id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                    role="region"
+                    aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                  >
+                   {{ product.metafields.custom.third_answer | metafield_tag}}
+                  </div>
+                </details>
+              </div>
+            {% endif %}
+
+            {% if product.metafields.custom.fourth_question != blank %}
+              <div
+                class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <details
+                  id="Details-{{ block.id }}-{{ section.id }}"
+             
+                >
+                  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h3 class="accordion__title inline-richtext h4">
+                    {{ product.metafields.custom.fourth_question }}
+                    </h3>
+                   <div class="tw-flex tw-relative">
+      <svg class="open:hidden tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5031 0.833374C10.5031 0.557232 10.2793 0.333374 10.0031 0.333374C9.727 0.333374 9.50314 0.557232 9.50314 0.833374V9.50299H0.833496C0.557354 9.50299 0.333496 9.72685 0.333496 10.003C0.333496 10.2791 0.557354 10.503 0.833496 10.503H9.50314V19.1727C9.50314 19.4488 9.727 19.6727 10.0031 19.6727C10.2793 19.6727 10.5031 19.4488 10.5031 19.1727V10.503H19.1728C19.4489 10.503 19.6728 10.2791 19.6728 10.003C19.6728 9.72685 19.4489 9.50299 19.1728 9.50299H10.5031V0.833374Z" fill="#1E262A"></path>
+</svg>
+
+      <svg class="open:show tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_1448_4879)">
+    <path d="M0 10H20" stroke="#1E262A" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_1448_4879">
+      <rect width="20" height="20" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+    </div>
+                  </summary>
+                  <div
+                    class="accordion__content rte"
+                    id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                    role="region"
+                    aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                  >
+                   {{ product.metafields.custom.fourth_answer | metafield_tag}}
+                  </div>
+                </details>
+              </div>
+            {% endif %}
+
+            {% if product.metafields.custom.fifth_question != blank %}
+              <div
+                class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <details
+                  id="Details-{{ block.id }}-{{ section.id }}"
+                
+                >
+                  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h3 class="accordion__title inline-richtext h4">
+                    {{ product.metafields.custom.fifth_question }}
+                    </h3>
+                <div class="tw-flex tw-relative">
+      <svg class="open:hidden tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5031 0.833374C10.5031 0.557232 10.2793 0.333374 10.0031 0.333374C9.727 0.333374 9.50314 0.557232 9.50314 0.833374V9.50299H0.833496C0.557354 9.50299 0.333496 9.72685 0.333496 10.003C0.333496 10.2791 0.557354 10.503 0.833496 10.503H9.50314V19.1727C9.50314 19.4488 9.727 19.6727 10.0031 19.6727C10.2793 19.6727 10.5031 19.4488 10.5031 19.1727V10.503H19.1728C19.4489 10.503 19.6728 10.2791 19.6728 10.003C19.6728 9.72685 19.4489 9.50299 19.1728 9.50299H10.5031V0.833374Z" fill="#1E262A"></path>
+</svg>
+
+      <svg class="open:show tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_1448_4879)">
+    <path d="M0 10H20" stroke="#1E262A" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_1448_4879">
+      <rect width="20" height="20" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+    </div>
+                  </summary>
+                  <div
+                    class="accordion__content rte"
+                    id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                    role="region"
+                    aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                  >
+                   {{ product.metafields.custom.fifth_answer | metafield_tag}}
+                  </div>
+                </details>
+              </div>
+            {% endif %}
+
+              {% if product.metafields.custom.sixth_question != blank %}
+              <div
+                class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <details
+                  id="Details-{{ block.id }}-{{ section.id }}"
+                 
+                >
+                  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    <h3 class="accordion__title inline-richtext h4">
+                    {{ product.metafields.custom.sixth_question }}
+                    </h3>
+                    <div class="tw-flex tw-relative">
+      <svg class="open:hidden tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5031 0.833374C10.5031 0.557232 10.2793 0.333374 10.0031 0.333374C9.727 0.333374 9.50314 0.557232 9.50314 0.833374V9.50299H0.833496C0.557354 9.50299 0.333496 9.72685 0.333496 10.003C0.333496 10.2791 0.557354 10.503 0.833496 10.503H9.50314V19.1727C9.50314 19.4488 9.727 19.6727 10.0031 19.6727C10.2793 19.6727 10.5031 19.4488 10.5031 19.1727V10.503H19.1728C19.4489 10.503 19.6728 10.2791 19.6728 10.003C19.6728 9.72685 19.4489 9.50299 19.1728 9.50299H10.5031V0.833374Z" fill="#1E262A"></path>
+</svg>
+
+      <svg class="open:show tw-transition-opacity tw-duration-300 tw-absolute tw-right-0 tw-translate-y-[-50%]" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_1448_4879)">
+    <path d="M0 10H20" stroke="#1E262A" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_1448_4879">
+      <rect width="20" height="20" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+    </div>
+                  </summary>
+                  <div
+                    class="accordion__content rte"
+                    id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                    role="region"
+                    aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                  >
+                   {{ product.metafields.custom.sixth_answer | metafield_tag}}
+                  </div>
+                </details>
+              </div>
+            {% endif %}
+          </div>
+      {% if product.metafields.custom.faq_image != blank %}
+            <div class="custom-faq-img">
+              <img src="{{ product.metafields.custom.faq_image | img_url:'master' }}" class="faq_image" />
+              {{ product.metafields.custom.faq_image_text | metafield_tag }}  
+            </div>
+          {% endif %}
+          </div>
+        {% endif %}
+<style>
+  .custom_faq_image {
+    display: flex;
+}
+
+img.faq_image {
+    height: 500px;
+}
+</style>
+{% schema %}
+{
+  "name": "Product Collapse",
+  "tag": "section",
+  "class": "product_collapse",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "t:sections.collapsible_content.settings.caption.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:sections.collapsible_content.settings.heading.label",
+      "default": "t:sections.collapsible_content.settings.heading.default"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.collapsible_content.settings.heading_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.collapsible_content.settings.layout.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.collapsible_content.settings.layout.options__1.label"
+        },
+        {
+          "value": "row",
+          "label": "t:sections.collapsible_content.settings.layout.options__2.label"
+        },
+        {
+          "value": "section",
+          "label": "t:sections.collapsible_content.settings.layout.options__3.label"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "container_color_scheme",
+      "label": "t:sections.collapsible_content.settings.container_color_scheme.label",
+      "info": "t:sections.collapsible_content.settings.container_color_scheme.info",
+      "default": "scheme-2"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_collapsible_row",
+      "default": false,
+      "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.collapsible_content.settings.header.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.collapsible_content.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.collapsible_content.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.collapsible_content.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.collapsible_content.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.collapsible_content.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.collapsible_content.settings.desktop_layout.options__1.label"
+        },
+        {
+          "value": "image_second",
+          "label": "t:sections.collapsible_content.settings.desktop_layout.options__2.label"
+        }
+      ],
+      "default": "image_second",
+      "label": "t:sections.collapsible_content.settings.desktop_layout.label",
+      "info": "t:sections.collapsible_content.settings.desktop_layout.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_row",
+      "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label",
+          "info": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.info"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__1.label"
+            },
+            {
+              "value": "apple",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__2.label"
+            },
+            {
+              "value": "banana",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__3.label"
+            },
+            {
+              "value": "bottle",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__4.label"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__5.label"
+            },
+            {
+              "value": "carrot",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__6.label"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__7.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__8.label"
+            },
+            {
+              "value": "clipboard",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__9.label"
+            },
+            {
+              "value": "dairy",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__10.label"
+            },
+            {
+              "value": "dairy_free",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__11.label"
+            },
+            {
+              "value": "dryer",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__12.label"
+            },
+            {
+              "value": "eye",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__13.label"
+            },
+            {
+              "value": "fire",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__14.label"
+            },
+            {
+              "value": "gluten_free",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__15.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__16.label"
+            },
+            {
+              "value": "iron",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__17.label"
+            },
+            {
+              "value": "leaf",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__18.label"
+            },
+            {
+              "value": "leather",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__19.label"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__20.label"
+            },
+            {
+              "value": "lipstick",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__21.label"
+            },
+            {
+              "value": "lock",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__22.label"
+            },
+            {
+              "value": "map_pin",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__23.label"
+            },
+            {
+              "value": "nut_free",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__24.label"
+            },
+            {
+              "value": "pants",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__25.label"
+            },
+            {
+              "value": "paw_print",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__26.label"
+            },
+            {
+              "value": "pepper",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__27.label"
+            },
+            {
+              "value": "perfume",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__28.label"
+            },
+            {
+              "value": "plane",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__29.label"
+            },
+            {
+              "value": "plant",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__30.label"
+            },
+            {
+              "value": "price_tag",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__31.label"
+            },
+            {
+              "value": "question_mark",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__32.label"
+            },
+            {
+              "value": "recycle",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__33.label"
+            },
+            {
+              "value": "return",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__34.label"
+            },
+            {
+              "value": "ruler",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__35.label"
+            },
+            {
+              "value": "serving_dish",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__36.label"
+            },
+            {
+              "value": "shirt",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__37.label"
+            },
+            {
+              "value": "shoe",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__38.label"
+            },
+            {
+              "value": "silhouette",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__39.label"
+            },
+            {
+              "value": "snowflake",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__40.label"
+            },
+            {
+              "value": "star",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__41.label"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__42.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__43.label"
+            },
+            {
+              "value": "washing",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__44.label"
+            }
+          ],
+          "default": "check_mark",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.label"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.page.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Collapse",
+      "blocks": [
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

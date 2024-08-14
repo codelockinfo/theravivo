@@ -1,0 +1,24 @@
+  <div class="custom-video-item-wrap">
+    <video autoplay loop muted playsinline style="max-width: 100%; width: 100%; height: auto;">
+    <source src="{{ section.settings.video_url }}" type="video/mp4">
+        </video>
+      </div>
+
+{% schema %}
+  {
+    "name": "Custom Video Section",
+    "settings": [
+       {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        }
+    ],
+     "presets": [
+    {
+      "name": "Custom Video Section",
+      "category": "Custom Video Section"
+    }
+  ]
+  }
+{% endschema %}

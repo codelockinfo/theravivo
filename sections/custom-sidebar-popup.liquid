@@ -1,0 +1,186 @@
+<div class="tw-main-container tw-hidden md:tw-flex page-width">
+    <div class="tw-relative tw-w-full">
+      <div class="tw-w-full tw-h-[calc(100%-12px)] tw-absolute tw-bottom-0 tw-rounded-xl tw-bg-blue-yellow"></div>
+      <div class="tw-max-w-[1058px] tw-mx-auto tw-flex tw-items-center tw-gap-20 tw-px-5 grid">
+        <div class="grid__item medium-up--one-third">
+        <img class="tw-w-auto tw-h-full tw-relative tw-self-start" src="{{ section.settings.image | img_url:'master' }}" sizes="160px" width="320" height="320" alt="Garantie de remboursement de 60 jours" loading="lazy">
+        </div>
+         <div class="grid__item medium-up--one-third">
+        <div class="tw-relative tw-flex tw-flex-col tw-gap-2 tw-pt-10 tw-pb-7 tw-max-w-[600px]">         
+              {{ section.settings.content }}        
+        </div>
+            </div>
+         <div class="grid__item medium-up--one-third">
+          <side-drawer-btn for="pdp-money-back-learn-more" class="tw-w-fit tw-text-nowrap tw-relative" aria-label="Learn More about Money Back Gaurantee toggle">
+            <button id="openDrawerButton" style="cursor:pointer;width:100px;" onclick="openNav()">{{ section.settings.link }}</button>
+          </side-drawer-btn>
+         </div>
+      </div>
+    </div>
+  <div id="mySidenav" class="sidenav">
+       <div class="popup-content-inner">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><svg class="tw-w-[16px] tw-h-[16px]" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M19.5449 1L1 19.5449" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
+  <path d="M19.5449 19.5449L1 1" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
+</svg></a>
+   <div class="popup-content">
+     {{ section.settings.popup_content }}
+     <img src="{{ section.settings.popup_image | img_url:'medium' }}" />
+     {{ section.settings.popup_main_content }}
+   </div>
+      </div>
+</div>
+  </div>
+<style>
+  
+
+/* .sidenav::before {
+    height: 100vh;
+    width: 100vw;
+    margin-left: 0;
+    display: inline-block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    content: "";
+    opacity: 0.8;
+    background-color: #4b4b4b;
+    -webkit-transition: opacity 0.2s ease-in;
+    -moz-transition: opacity 0.2s ease-in;
+    -ms-transition: opacity 0.2s ease-in;
+    -o-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    pointer-events: none;
+    right:0px;
+} */
+  .popup-content-inner{
+ background-color: #efede9;
+    padding-top: 60px;
+    padding: 0px 31px;
+    height: 100%;
+    width: 480px;
+    float: right;
+height: 100vh;
+    padding-right:0px;
+  }
+  .popup-content {
+    padding-right: 30px;
+    overflow: auto;
+    height: 100%;
+}
+.sidenav {
+
+    background-color: rgba(75, 75, 75, 0.6);
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1050;
+   
+}
+
+.sidenav .popup-content h3 {
+    text-align: left;
+    font-family: "Alinea Sans W01 Medium Italic";
+    font-size: 22px;
+    margin-top: 0;
+    color: #000;
+    letter-spacing: 0;
+    padding-top: 24px;
+}
+
+.sidenav .popup-content 
+ p {
+    font-family: 'Varela';
+    letter-spacing: 0;
+}
+
+.sidenav .popup-content 
+ img {
+    width: 100%;
+}
+
+.sidenav a {
+  text-align: center;  
+  padding-bottom: 8px;
+  padding-top: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+    color: #4b4b4b;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 36px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 1px solid #4b4b4b;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+  {% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+        "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "richtext",
+      "id": "popup_content",
+      "label": "Popup Heading"
+    },
+     {
+      "type": "image_picker",
+      "id": "popup_image",
+      "label": "Popup Image"
+    },
+     {
+      "type": "richtext",
+      "id": "popup_main_content",
+      "label": "Popup Conent"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Side Bar Popup"
+    }
+  ]
+}
+{% endschema %}

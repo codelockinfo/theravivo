@@ -1,0 +1,108 @@
+<div class="page-width {{ section.settings.custom_cl }}">
+  <div class="center-slider_wrap">
+    {% if section.settings.title != blank %}
+    <div class="top-content">
+      {{ section.settings.title }}
+    </div>
+    {% endif %}
+    <div class="slides_box">
+      {% for block in section.blocks %}
+        <div class="box">
+          {% if block.settings.image != blnak %}
+          <div class="image_box"><img src="{{ block.settings.image | img_url:'master' }}" /></div>
+          {% endif %}
+          <div class="content_box">
+           <div class="ratting-name-box">
+             <div class="ratting">
+                <svg width="82" height="14" viewBox="0 0 82 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.52096 0.0244141L8.28753 4.09828L12.7079 4.51949L9.37932 7.45849L10.3447 11.7927L6.52096 9.53521L2.69722 11.7927L3.66259 7.45849L0.334019 4.51949L4.75439 4.09828L6.52096 0.0244141Z" fill="#FFD200"></path>
+                <path d="M23.5346 0.0244141L25.3012 4.09828L29.7216 4.51949L26.393 7.45849L27.3584 11.7927L23.5346 9.53521L19.7109 11.7927L20.6763 7.45849L17.3477 4.51949L21.7681 4.09828L23.5346 0.0244141Z" fill="#FFD200"></path>
+                <path d="M40.5483 0.0244141L42.3149 4.09828L46.7352 4.51949L43.4067 7.45849L44.372 11.7927L40.5483 9.53521L36.7246 11.7927L37.6899 7.45849L34.3614 4.51949L38.7817 4.09828L40.5483 0.0244141Z" fill="#FFD200"></path>
+                <path d="M57.562 0.0244141L59.3285 4.09828L63.7489 4.51949L60.4203 7.45849L61.3857 11.7927L57.562 9.53521L53.7382 11.7927L54.7036 7.45849L51.375 4.51949L55.7954 4.09828L57.562 0.0244141Z" fill="#FFD200"></path>
+                <path d="M74.5776 0.0244141L76.3442 4.09828L80.7645 4.51949L77.436 7.45849L78.4013 11.7927L74.5776 9.53521L70.7539 11.7927L71.7192 7.45849L68.3907 4.51949L72.811 4.09828L74.5776 0.0244141Z" fill="#FFD200"></path>
+                </svg>
+               <!-- <img src="{{ block.settings.ratting_image | img_url:'master' }}" /> -->
+               </div>
+             <div class="name_box"><span>{{ block.settings.name }}</span></div>
+           </div>
+            <div class="main-content-box">
+              {{ block.settings.content }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="extra-content">
+      {{ section.settings.morecontent }}
+    </div>
+  </div>
+</div>
+<style>
+  .box {
+    display: flex;
+}
+
+.ratting-name-box {
+    display: flex;
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "center_slider",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "morecontent",
+      "label": "Content"
+    },
+     {
+      "type": "text",
+      "id": "custom_cl",
+      "label": "Custom Class (Do Not Touch This)"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+         {
+           "type": "image_picker",
+           "id": "ratting_image",
+           "label": "Ratting Icon"
+         },
+         {
+           "type": "text",
+           "id": "name",
+           "label": "Name"
+         },
+         {
+           "type": "richtext",
+           "id": "content",
+           "label": "Content"
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "Center Slider"
+    }
+  ]
+}
+{% endschema %}

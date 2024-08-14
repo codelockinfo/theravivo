@@ -1,0 +1,72 @@
+<div class="custom_img_txt_wrapper">
+  <div class="custom_left_image">
+    {% if section.settings.image != blank %}
+    <img src="{{ section.settings.image | img_url:'master' }}">
+      {% endif %}
+  </div>
+  <div class="main_right_side-wrap">
+    {% for block in section.blocks %}
+    <div class="inner_right_txt">
+      <li>
+      {% if block.settings.icon_img != blank %}
+      <span><img src="{{ block.settings.icon_img | img_url:'small' }}"></span>
+      {% endif %}
+      <p>{{ block.settings.content }}</p>
+      </li>
+    </div>
+      {% endfor %}
+  </div>
+</div>
+
+<style>
+.custom_img_txt_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  .custom_left_image {
+    width: 50%;
+  }
+  .custom_left_image img { width: 100%; }
+  .main_right_side-wrap {
+    width: 50%;
+  }
+  
+</style>
+
+{% schema %}
+{
+  "name": "Custom Image Text Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_img",
+          "label": "Image Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Image Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Text Section",
+      "category": "Custom Image Text Section"
+    }
+  ]
+}
+{% endschema %}

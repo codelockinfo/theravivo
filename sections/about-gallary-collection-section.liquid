@@ -1,0 +1,63 @@
+<div class="custom-gallery-wrap">
+  {% for block in section.blocks %}
+    {% if block.type == 'video' %}
+         <div class="gallery-item video">
+        <video autoplay loop muted playsinline style="max-width: 100%; height: auto;">
+          <source src="{{ block.settings.video_url }}" type="video/mp4">
+        </video>
+      </div>
+
+      
+    {% elsif block.type == 'image' %}
+      <div class="gallery-item-wrap">
+        {% if block.settings.image != blank %}
+        <img src="{{ block.settings.image | img_url: '480x480' }}" alt="Gallery Image">
+          {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<style>
+  .custom-gallery-wrap { display: flex; flex-wrap: wrap;}
+  .gallery-item-wrap { width: 20%; }
+  .gallery-item-wrap img { width: 100%; }
+  .gallery-item.video {  width: 20%;}
+</style>
+
+{% schema %}
+{
+  "name": "Custom Gallery Section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Gallery Section",
+      "category": "Custom Gallery Section"
+    }
+  ]
+}
+{% endschema %}

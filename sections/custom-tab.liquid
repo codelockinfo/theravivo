@@ -1,0 +1,165 @@
+<div class="page-width">
+  <div class="custom-tab">
+    <h2>{{ section.settings.title }}</h2>
+
+ <div>
+  <ul class="tabs">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'tab' %}
+          <li><a href="#tab-{{ forloop.index }}">{{ block.settings.heading }}</a></li>
+      {% endcase %}
+    {% endfor %}
+  </ul>
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'tab' %}
+        <div id="tab-{{ forloop.index }}">
+          <div class="main-content">
+            <div class="content">
+              <div class="left_content">
+                {{ block.settings.leftcontent }}
+              </div>
+              <div class="right_content">
+                {{ block.settings.right_content }}
+                {% if block.settings.right_list_image1  != blank %}
+                <div class="right_list">
+                   <img src="{{ block.settings.right_list_image1 | img_url:'master' }}">
+                    <h3>{{ block.settings.right_list1 }}</h3>
+                  </div>
+                {% endif %}
+                 {% if block.settings.right_list_image2  != blank %}
+                <div class="right_list">
+                   <img src="{{ block.settings.right_list_image2 | img_url:'master' }}">
+                    <h3>{{ block.settings.right_list2 }}</h3>
+                  </div>
+                {% endif %}
+                 {% if block.settings.right_list_image3  != blank %}
+                <div class="right_list">
+                   <img src="{{ block.settings.right_list_image3 | img_url:'master' }}">
+                    <h3>{{ block.settings.right_list3 }}</h3>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+            {% if block.settings.product_heading != blank %}
+            <h2>{{ block.settings.product_heading }}</h2>
+            {% endif %}
+            <ul class="science_productss">
+              {% assign collection_handle = block.settings.collection %}
+              {% if collection_handle %}
+                {% assign collection = collections[collection_handle] %}
+                {% if collection.products.size > 0 %}
+                  {% for product in collection.products limit: 3 %}
+                    <li class="product_list {{ forloop.index }}">
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_media | img_url: 'master' }}" class="pro_image" />
+                        <div class="details-sec">
+                        <h3>{{ product.title }}</h3>
+                           <div class="yotpo-widget-instance" data-yotpo-instance-id="824718" data-yotpo-product-id="{{product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="{{template.name}}"></div>
+                        <h5>{{ product.price | money_with_currency }}</h5>
+                        <a class="learn-more" href="{{ product.url }}">Learn More</a>
+                        </div>
+                      </a>
+                    </li>
+                  {% endfor %}
+                {% else %}
+                  <li>No products found in collection {{ collection_handle }}</li>
+                {% endif %}
+              {% else %}
+                <li>No collection selected</li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
+
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Tab",
+  "tag": "section",
+  "class": "custom_tab",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Product Tab",
+       "type": "tab",
+       "settings": [
+         {
+           "type": "text",
+           "id": "heading",
+           "label": "Heading"
+         },
+         {
+           "type": "richtext",
+           "id": "leftcontent",
+           "label": "Left Content"
+         },
+         {
+           "type": "richtext",
+           "id": "right_content",
+           "label": "Right Content"
+         },
+         {
+           "type": "image_picker",
+           "id": "right_list_image1",
+           "label": "Right List Image"
+         },
+         {
+           "type": "richtext",
+           "id": "right_list1",
+           "label": "Right List 1"
+         },
+         {
+           "type": "image_picker",
+           "id": "right_list_image2",
+           "label": "Right List Image"
+         },
+         {
+           "type": "richtext",
+           "id": "right_list2",
+           "label": "Right List 2"
+         },
+        {
+           "type": "image_picker",
+           "id": "right_list_image3",
+           "label": "Right List Image"
+         },
+         {
+           "type": "richtext",
+           "id": "right_list3",
+           "label": "Right List 3"
+         },
+         {
+           "type": "richtext",
+           "id": "product_heading",
+           "label": "Product Heading"
+         },
+         {
+           "type": "collection",
+           "id": "collection",
+           "label": "Collection"
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "Custom Tab"
+    }
+  ]
+}
+{% endschema %}
