@@ -1,0 +1,157 @@
+<div class="main">
+      <div class="mask-container">
+        <h2 class="mainheading white1">How to use</h2>
+        <div class="mask">
+          <div class="clsleft">
+            <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Rectangle_100_1.png?v=1723642911" alt="Theravivo Mask" class="image" />
+            <div class="logo">
+              <span class="plus"></span>
+            </div>
+          </div>
+          <div class="clsright">
+            <div class="content_text">
+              <div class="clsright_title">Comment utiliser votre Masque LED</div>
+              <div class="clsright_title">Theravivo à Nano-Emission Photonique</div>
+              <p class="Instructions">Instructions d'utilisation:</p>
+              <div class="step">
+                <div class="step-number">01</div>
+                <div class="step-description">
+                  Nettoyez soigneusement votre visage
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">02</div>
+                <div class="step-description">
+                  Mettez le masque LED Theravivo en place sur <br />votre
+                  visage.
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">03</div>
+                <div class="step-description">
+                  Allumez le masque et sélectionnez le programme <br />
+                  adapté à vos besoins.
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">04</div>
+                <div class="step-description">
+                  Relaxez-vous pendant 10 minutes pendant que le <br />masque
+                  fait son effet.
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">05</div>
+                <div class="step-description">
+                  Utilisez le masque de 3 à 7 fois par semaine pour des
+                  <br />résultats optimaux.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% schema %}
+    {
+      "name": "Custom image text",
+      "class": "custom-image-text-section",
+      "presets": [
+        {
+          "name": "Custom image text"
+        }
+      ]
+    }
+{% endschema %}
+<style>
+    .main {
+      background-color: #4b4b4b;
+      padding: 50px 0;
+    }
+    .mask {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .mask-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .clsleft {
+      width: 50%;
+      padding: 20px;
+    }
+    .content_text {
+      margin-top: 50px;
+    }
+    .clsright {
+      width: 50%;
+      padding: 20px;
+      color: #fff;
+    }
+    .heading {
+      text-align: center;
+      font-size: 32px;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .clsright_title {
+      font-size: 25px;
+      line-height: 33px;
+      color: #EFEDE9;
+    }
+    .Instructions {
+      font-size: 24px;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .step-number {
+      background-color: #4b4b4b;
+      color: #fff;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    .step-description {
+      line-height: 1.5;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width:1024px){
+        .image{
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: 767px) {
+      .mask {
+        display: block;
+      }
+      .clsright {
+        width: 100% !important;
+        margin-top: 0px;
+      }
+      .clsleft {
+        width: 100%;
+      }
+      .image{
+        margin-top: 0px;
+      }
+    }
+  </style>
