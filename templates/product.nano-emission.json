@@ -346,13 +346,15 @@
         "text_g3ELVc": {
           "type": "text",
           "settings": {
-            "contenttext": ""
+            "sectionimg": "shopify:\/\/shop_images\/Group_15_effcf82c-64d9-4ecb-9a9a-fe180b76ff4c.png",
+            "contenttext": "Nanolasers"
           }
         },
         "text_iGVcbt": {
           "type": "text",
           "settings": {
-            "contenttext": ""
+            "sectionimg": "shopify:\/\/shop_images\/Layer_1_2.png",
+            "contenttext": "Light-Emitting Diodes (LEDs)"
           }
         }
       },
