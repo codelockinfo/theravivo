@@ -445,6 +445,11 @@
       "settings": {
       }
     },
+    "accordian_with_image_wrGaeq": {
+      "type": "accordian-with-image",
+      "settings": {
+      }
+    },
     "custom_imagetext_MCqppX": {
       "type": "custom-imagetext",
       "settings": {
@@ -505,6 +510,7 @@
     "nano_photonic_yfC4fx",
     "studies_section_a3NbKh",
     "expert_9Ve7DW",
+    "accordian_with_image_wrGaeq",
     "custom_imagetext_MCqppX",
     "your_sckin_FmEQ89",
     "backgroundimage_accordian_UqYmDz",
