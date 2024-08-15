@@ -1,0 +1,152 @@
+<div class="mainaccordian-section">
+    <div class="mainheading white1">Results over time</div>
+    <div class="accordian-customwidth">
+      <div class="accordian-section">
+        <div class="width50">
+          <details open>
+            <summary class="accordianheading">Week 1</summary>
+            <div class="customcontent">
+              <div class="accordiancontentheading">
+                Lorem ipsum dolor sit amet
+              </div>
+              <div class="accordiancontent">
+                Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam
+                numquam scriptorem sed ei. Mel labitur facilisi praesent ut,
+                an brute facilisis has. Sea ne nusquam liberavisse, putent
+                bonorum ut namLorem ipsum dolor sit amet, pro petentium
+                consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
+                facilisi praesent ut, an brute facilisis has. Sea ne nusquam
+                liberavisse, putent bonorum ut nam
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="accordianheading">Week 2</summary>
+            <div class="customcontent">
+              <div class="accordiancontentheading">
+                Lorem ipsum dolor sit amet
+              </div>
+              <div class="accordiancontent">
+                Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam
+                numquam scriptorem sed ei. Mel labitur facilisi praesent ut,
+                an brute facilisis has. Sea ne nusquam liberavisse, putent
+                bonorum ut namLorem ipsum dolor sit amet, pro petentium
+                consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
+                facilisi praesent ut, an brute facilisis has. Sea ne nusquam
+                liberavisse, putent bonorum ut nam
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="accordianheading">Week 3</summary>
+            <div class="customcontent">
+              <div class="accordiancontentheading">
+                Lorem ipsum dolor sit amet
+              </div>
+              <div class="accordiancontent">
+                Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam
+                numquam scriptorem sed ei. Mel labitur facilisi praesent ut,
+                an brute facilisis has. Sea ne nusquam liberavisse, putent
+                bonorum ut namLorem ipsum dolor sit amet, pro petentium
+                consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
+                facilisi praesent ut, an brute facilisis has. Sea ne nusquam
+                liberavisse, putent bonorum ut nam
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="accordianheading">Week 4</summary>
+            <div class="customcontent">
+              <div class="accordiancontentheading">
+                Lorem ipsum dolor sit amet
+              </div>
+              <div class="accordiancontent">
+                Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam
+                numquam scriptorem sed ei. Mel labitur facilisi praesent ut,
+                an brute facilisis has. Sea ne nusquam liberavisse, putent
+                bonorum ut namLorem ipsum dolor sit amet, pro petentium
+                consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
+                facilisi praesent ut, an brute facilisis has. Sea ne nusquam
+                liberavisse, putent bonorum ut nam
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="width50">
+          <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/abc.png?v=1723700594" class="faceimg" />
+        </div>
+      </div>
+    </div>
+  </div>
+{% schema %}
+    {
+      "name": "Accordian with image",
+      "class": "accordian-with-image",
+      "presets": [
+        {
+          "name": "Accordian with image"
+        }
+      ]
+    }
+{% endschema %}
+<style>
+  .mainaccordian-section {
+    background-color: #4b4b4b;
+    padding: 50px 0 0;
+  }
+  .accordian-customwidth {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .accordian-section {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #808194;
+    padding-bottom: 50px;
+
+  }
+  .width50 {
+    width: 50%;
+  }
+  .faceimg {
+    width: 100%;
+  }
+  details[open] > summary {
+    color: #a4a29f;
+  }
+  .accordianheading {
+    font-size: 24px;
+    color: #efede9;
+    font-weight: 600;
+  }
+  .accordiancontentheading {
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: #efede9;
+  }
+
+  .accordiancontent {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .customcontent {
+    padding: 20px;
+  }
+  .accordianheading ::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+  @media screen and (max-width: 768px) {
+    .accordian-section {
+      flex-wrap: wrap;
+    }
+    .width50 {
+      width: 100%;
+    }
+  }
+</style>
