@@ -1,0 +1,177 @@
+<div class="table-container">
+    <div class="mainheading white1"> Compare Theravivo's system to other anti-aging treatments</div>
+    <div class="boxpadding">
+        <div class="comparison-table">
+        <div class="clsrows customheader">
+            <div class="customcell">CaracterIstique</div>
+            <div class="customcell">Theravivo</div>
+            <div class="customcell">Autres</div>
+        </div>
+        <div class="clsrows firstclsrows">
+            <div class="customcell">Technologie</div>
+            <div class="customcell">Nano-Emission Photonique</div>
+            <div class="customcell">LED standard</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Penetration</div>
+            <div class="customcell">3 couches de peau</div>
+            <div class="customcell">1-2 couches</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Boost collagene</div>
+            <div class="customcell">+84,91% en 3 semaines</div>
+            <div class="customcell">Inferieur, variable</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Séance</div>
+            <div class="customcell">10 minutes</div>
+            <div class="customcell">15-30 minutes</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Frequence</div>
+            <div class="customcell">3x/semaine</div>
+            <div class="customcell">Souvent quotidien</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Nombre de LED</div>
+            <div class="customcell">150 haute puissance</div>
+            <div class="customcell">&lt;100 typiquement</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Spectre lumineux</div>
+            <div class="customcell">Rouge + infrarouge proche</div>
+            <div class="customcell">Souvent monochrome</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Personnalisation</div>
+            <div class="customcell">Programmes multiples</div>
+            <div class="customcell">Limitee/aucune</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Securite</div>
+            <div class="customcell">Sans UV, teste derma</div>
+            <div class="customcell">Varie</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Comfort</div>
+            <div class="customcell">Ergonomique, sans fil</div>
+            <div class="customcell">Souvent encombrant/filiaire</div>
+        </div>
+        <div class="clsrows">
+            <div class="customcell">Garantie</div>
+            <div class="customcell">2 ans</div>
+            <div class="customcell">Generalement &lt;1 an</div>
+        </div>
+        <div class="clsrows secondclsrows">
+            <div class="customcell">Prix</div>
+            <div class="customcell">Premium</div>
+            <div class="customcell">Variable, souvent moins</div>
+        </div>
+        </div>
+    </div>
+  </div>
+
+{% schema %}
+    {
+      "name": "Table information",
+      "class": "table-information-section",
+      "presets": [
+        {
+          "name": "Table information"
+        }
+      ]
+    }
+{% endschema %}
+<style>
+    .boxpadding{
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .table-information-section{
+        background: linear-gradient(180deg, #3c3c3c 50%, #ffffff 51%, #ffffff 100%);
+    }
+  .firstclsrows .customcell {
+    border: 2px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-top: 20px;
+  }
+  .secondclsrows .customcell {
+    border: 2px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-bottom: 20px;
+  }
+  .table-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+  .comparison-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: grid;
+    overflow-x: auto;
+  }
+
+  .clsrows {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .customcell {
+    display: table-customcell;
+    padding: 10px 15px;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+    width: 31%;
+    margin: 0 1%;
+    font-size: 16px;
+    word-wrap: break-word;
+  }
+
+  .customheader .customcell {
+    background-color: #3c3c3c !important; /* Dark gray background for customheader */
+    color: #ffffff !important; /* White text color */
+    font-weight: bold;
+    text-align: center;
+    width: 31%;
+    margin: 1%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    word-wrap: break-word;
+
+  }
+
+  .customcell:nth-child(2),
+  .customcell:nth-child(3) {
+    background-color: #f5f2eb; /* Light beige background for content */
+    color: #3c3c3c; /* Dark gray text color */
+  }
+
+  .clsrows:nth-child(even) .customcell:nth-child(2),
+  .clsrows:nth-child(even) .customcell:nth-child(3) {
+    background-color: #f5f2eb; /* Keep consistent background color */
+  }
+
+  .customcell:nth-child(1) {
+    background-color: #3c3c3c; /* Dark gray background for the first column */
+    color: #ffffff; /* White text color */
+  }
+  .mainheading{
+    line-height: 57px;
+  }
+  @media screen and (max-width: 768px) {
+    .boxpadding {
+        margin-top: 10%;
+    }
+    .mainheading {
+        line-height: 36px;
+    }
+  }
+</style>
