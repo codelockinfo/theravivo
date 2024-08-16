@@ -5,7 +5,7 @@
       <div class="width50">
         {% for block in section.blocks %}
           {% if block.settings.accordianquestion !=  blank %}
-            <details {% if foorloop.index == 1%} open{% endif %}>
+            <details name="accordion-demo" {% if forloop.index == 1 %} open{% endif %}>
               <summary class="accordianheading">{{ block.settings.accordianquestion }}</summary>
               <div class="customcontent">
                   {% if block.settings.accordiananswerheading  != blank %} <div class="accordiancontentheading">{{ block.settings.accordiananswerheading }}</div>{% endif %}
