@@ -321,13 +321,23 @@
     },
     "after_before_image_YYEaDD": {
       "type": "after-before-image",
+      "blocks": {
+        "images_fzyAgy": {
+          "type": "images",
+          "settings": {
+            "beforeimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.19_70931ec8_2.jpg",
+            "beforelabel": "Before",
+            "afterimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.25_f757e0bc_1_6dd7bbca-268e-4fcd-ab1c-55f770967d40.jpg",
+            "afterlabel": "After"
+          }
+        }
+      },
+      "block_order": [
+        "images_fzyAgy"
+      ],
       "settings": {
         "heading": "Lorem ipsum dolor sit amet",
         "subheading": "Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut",
-        "beforeimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.19_70931ec8_2.jpg",
-        "beforelabel": "Before",
-        "afterimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.25_f757e0bc_1_6dd7bbca-268e-4fcd-ab1c-55f770967d40.jpg",
-        "afterlabel": "After",
         "text1": "Cynthia - Verified buyer In clinical studies, users experienced:",
         "text2": "Witnessed a considerable impr ovement in skin firmness and fullness.",
         "text3": "Noticed skin appearing plumper and more vibrant after just 4 weeks.",
