@@ -1,4 +1,9 @@
 
+@font-face {
+    font-family: "Alinea Incise W01 Regular";
+    src: url("https://cdn.shopify.com/s/files/1/0826/8857/3779/files/dacf293f8c5019e3f9c8191c483ac33d.woff2?v=1723780139")format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0826/8857/3779/files/dacf293f8c5019e3f9c8191c483ac33d.woff?v=1723780140")format("woff");
+}
 :root {
 --black1: #00071e;
 --white1: #ffffff;
@@ -10,6 +15,7 @@
     color: var(--white1) !important;
 }
 .mainheading{
+    font-family: "Alinea Incise W01 Regular";
     text-align:center;
     font-size: 48px;
     font-weight: bold;
