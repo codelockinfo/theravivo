@@ -287,7 +287,6 @@
         "text_iGVcbt"
       ],
       "settings": {
-        "bgimg": "shopify:\/\/shop_images\/Rectangle_4.png",
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/273dcbcef6454b8dbc62174bf4c5b207.mp4",
         "nanoh1": "Nano-Photonic Emission",
         "nanop1": "Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse",
@@ -399,6 +398,7 @@
         },
         "accordian_HDNDFk": {
           "type": "accordian",
+          "disabled": true,
           "settings": {
             "accordianquestion": "Week 5",
             "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
