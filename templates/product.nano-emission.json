@@ -588,6 +588,12 @@
     },
     "your_sckin_FmEQ89": {
       "type": "your-sckin",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "promo_section_FBNgCc": {
+      "type": "promo_section",
       "settings": {
       }
     },
@@ -671,6 +677,7 @@
     "custom_imagetext_MCqppX",
     "table_information_JeWW8F",
     "your_sckin_FmEQ89",
+    "promo_section_FBNgCc",
     "backgroundimage_accordian_UqYmDz",
     "1723120433d2b39099",
     "shogun-below",
