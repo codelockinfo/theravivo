@@ -1,6 +1,7 @@
 <section class="image-comparison" data-component="image-comparison-slider">
-    <div class="mainheading black1">Lorem ipsum dolor sit amet</div>
-    <div class="main-subheading mb-50">Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut</div>
+    <div class="mainheading black1">{{section.settings.heading}}</div>
+    <div class="main-subheading mb-50">{{section.settings.subheading}}</div>
+    
     {% for block in section.blocks %}
       <div class="image-comparison__slider-wrapper ">
           <label for="image-comparison-range" class="image-comparison__label">Move image comparison slider</label>
