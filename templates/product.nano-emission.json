@@ -471,23 +471,68 @@
         "tabledata_ngfBWQ": {
           "type": "tabledata",
           "settings": {
-            "column1text": "",
-            "column2text": "",
-            "column3text": ""
+            "column1text": "Technologie",
+            "column2text": "Nano-Emission Photonique",
+            "column3text": "LED standard"
           }
         },
         "tabledata_Vf7d4B": {
           "type": "tabledata",
           "settings": {
-            "column1text": "",
-            "column2text": "",
-            "column3text": ""
+            "column1text": "Penetration",
+            "column2text": "3 couches de peau",
+            "column3text": "1-2 couches"
+          }
+        },
+        "tabledata_jHWKfX": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Boost collagene",
+            "column2text": "+84,91% en 3 semaines",
+            "column3text": "Inferieur, variable"
+          }
+        },
+        "tabledata_AGiFjE": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Séance",
+            "column2text": "10 minutes",
+            "column3text": "15-30 minutes"
+          }
+        },
+        "tabledata_QzXGBg": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Frequence",
+            "column2text": "3x\/semaine",
+            "column3text": "Souvent quotidien"
+          }
+        },
+        "tabledata_ynLYfh": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Nombre de LED",
+            "column2text": "150 haute puissance",
+            "column3text": "&lt;100 typiquement"
+          }
+        },
+        "tabledata_mdjKBh": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Nombre de LED",
+            "column2text": "150 haute puissance",
+            "column3text": "&lt;100 typiquement"
           }
         }
       },
       "block_order": [
         "tabledata_ngfBWQ",
-        "tabledata_Vf7d4B"
+        "tabledata_Vf7d4B",
+        "tabledata_jHWKfX",
+        "tabledata_AGiFjE",
+        "tabledata_QzXGBg",
+        "tabledata_ynLYfh",
+        "tabledata_mdjKBh"
       ],
       "settings": {
         "heading": "Compare Theravivo's system to other anti-aging treatments",
