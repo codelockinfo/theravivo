@@ -457,8 +457,31 @@
     },
     "accordian_with_image_wrGaeq": {
       "type": "accordian-with-image",
+      "blocks": {
+        "accordian_Q6ebdE": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "Week 1",
+            "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
+            "accordiananswercontent": "<p>Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam<\/p>"
+          }
+        },
+        "accordian_wUDU8y": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "Week 1",
+            "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
+            "accordiananswercontent": "<p>Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordian_Q6ebdE",
+        "accordian_wUDU8y"
+      ],
       "settings": {
-        "heading": "Results over time"
+        "heading": "Results over time",
+        "imglink": "shopify:\/\/shop_images\/abc.png"
       }
     },
     "custom_imagetext_MCqppX": {
