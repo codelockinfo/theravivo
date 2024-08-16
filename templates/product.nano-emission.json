@@ -467,7 +467,33 @@
     },
     "table_information_JeWW8F": {
       "type": "table-information",
+      "blocks": {
+        "tabledata_ngfBWQ": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "",
+            "column2text": "",
+            "column3text": ""
+          }
+        },
+        "tabledata_Vf7d4B": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "",
+            "column2text": "",
+            "column3text": ""
+          }
+        }
+      },
+      "block_order": [
+        "tabledata_ngfBWQ",
+        "tabledata_Vf7d4B"
+      ],
       "settings": {
+        "heading": "Compare Theravivo's system to other anti-aging treatments",
+        "heading1text": "Caracterlstique",
+        "heading2text": "Theravivo",
+        "heading3text": "Autres"
       }
     },
     "your_sckin_FmEQ89": {
@@ -506,7 +532,9 @@
         "accordian_M4LNFy"
       ],
       "settings": {
-        "heading": "Frequently Asked Questions"
+        "heading": "Frequently Asked Questions",
+        "imglink": "shopify:\/\/shop_images\/Rectangle_33.png",
+        "imglinkmob": "shopify:\/\/shop_images\/image_2024_08_14T14_52_11_455Z.webp"
       }
     },
     "1723120433d2b39099": {
