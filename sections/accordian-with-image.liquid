@@ -1,5 +1,5 @@
 <div class="mainaccordian-section">
-  {% if section.settings.heading !=  blank %}<div class="mainheading white1">{{ section.settings.heading }}</div>{% endif %}
+  {% if section.settings.heading !=  blank %}<h2 class="mainheading white1">{{ section.settings.heading }}</h2>{% endif %}
   <div class="accordian-customwidth">
     <div class="accordian-section">
       <div class="width50">
@@ -128,6 +128,8 @@
   @media screen and (max-width: 768px) {
     .accordian-section {
       flex-wrap: wrap;
+      padding-left: 20px;
+      padding-right: 20px;
     }
     .width50 {
       width: 100%;
