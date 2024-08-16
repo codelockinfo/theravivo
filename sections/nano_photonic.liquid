@@ -1,26 +1,31 @@
 
-<div class="Nano_Photonic_section" >
-  <video playsinline autoplay muted loop class="customvideo">
-  <source src="{{ section.settings.video_url }}" type="video/mp4">
-  </video>
-  <div class="container page-width content-center">
-      <div class="Nano_content">
-         <h1 class="mainheading">{{ section.settings.nanoh1 }}</h1>
-         <p class="Nano_p">{{ section.settings.nanop1 }}</p>
-         <p class="Nano_p">{{ section.settings.nanop2 }}</p>
-      </div>
-  </div>
+<div class="Nano_Photonic_section">
+  {% if  section.settings.video_url != blank %} 
+    
+    <video playsinline autoplay muted loop class="customvideo">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+    </video>
+    
+    <div class="container page-width content-center">
+        <div class="Nano_content">
+          <h1 class="mainheading">{{ section.settings.nanoh1 }}</h1>
+          <p class="Nano_p">{{ section.settings.nanop1 }}</p>
+          <p class="Nano_p">{{ section.settings.nanop2 }}</p>
+        </div>
+    </div>
+  
    <div class="Nano_Photonic_details">
       {%- for block in section.blocks -%}
        <div class="Nano_details_box">
           {% if block.settings.sectionimg != blank %}
-         <div class="nano_img_box">  <img src="{{ block.settings.sectionimg | img_url:'master' }}" alt=""> 
-         </div>
-           {% endif %}
+            <div class="nano_img_box">  <img src="{{ block.settings.sectionimg | img_url:'master' }}" alt=""> </div>
+          {% endif %}
          <div class="nano_content_box">{{ block.settings.contenttext }}</div>
        </div>
      {% endfor %}
    </div>
+   
+  {% endif %}
 </div>
  
  {% schema %}
@@ -28,11 +33,6 @@
     "name": "Nano-Photonic Section",
     "settings": [
         {
-           "type": "image_picker",
-           "id": "bgimg",
-           "label": "Background img"
-         },
-         {
           "type": "url",
           "id": "video_url",
           "label": "Video URL"
