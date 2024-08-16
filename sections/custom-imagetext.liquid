@@ -1,52 +1,24 @@
 <div class="main">
       <div class="mask-container">
-        <h2 class="mainheading white1">How to use</h2>
+        {% if section.settings.heading != blank %}<h2 class="mainheading white1">{{ section.settings.heading }}</h2>{% endif %}
         <div class="mask">
           <div class="clsleft">
-            <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Rectangle_100_1.png?v=1723642911" alt="Theravivo Mask" class="image" />
-            <div class="logo">
-              <span class="plus"></span>
-            </div>
+            {% if section.settings.imglink  != blank %}<img src="{{ section.settings.imglink | img_url:'master' }}" alt="Theravivo Mask" class="image" />{% endif %}
           </div>
           <div class="clsright">
             <div class="content_text">
-              <div class="clsright_title">Comment utiliser votre Masque LED</div>
-              <div class="clsright_title">Theravivo à Nano-Emission Photonique</div>
-              <p class="Instructions">Instructions d'utilisation:</p>
-              <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-description">
-                  Nettoyez soigneusement votre visage
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-description">
-                  Mettez le masque LED Theravivo en place sur <br />votre
-                  visage.
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-description">
-                  Allumez le masque et sélectionnez le programme <br />
-                  adapté à vos besoins.
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">04</div>
-                <div class="step-description">
-                  Relaxez-vous pendant 10 minutes pendant que le <br />masque
-                  fait son effet.
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">05</div>
-                <div class="step-description">
-                  Utilisez le masque de 3 à 7 fois par semaine pour des
-                  <br />résultats optimaux.
-                </div>
-              </div>
+            {% if section.settings.subheading != blank %}<div class="clsright_title">{{  section.settings.subheading }}</div>{% endif %}
+            {% if  section.settings.blockheading != blank %}<p class="Instructions">{{ section.settings.blockheading }}</p> {% endif %}
+              {% for block in section.blocks %}
+                  {% if block.settings.textcontent  != blank %}
+                    <div class="step">
+                      <div class="step-number">{{ forloop.index }}</div>
+                      <div class="step-description">
+                        {{ block.settings.textcontent }}
+                      </div>
+                    </div>
+                  {% endif %}
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -57,6 +29,44 @@
     {
       "name": "Custom image text",
       "class": "custom-image-text-section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "How to use",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "default": "Comment utiliser votre Masque LED <br/>Theravivo à Nano-Emission Photonique",
+          "label": "t:sections.image-with-text.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "blockheading",
+          "default": "Instructions d'utilisation:",
+          "label": "Content Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "imglink",
+          "label": "Image"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "accordian",
+          "name": "t:sections.email-signup-banner.blocks.heading.name",
+          "settings": [
+              {
+                "type": "richtext",
+                "id": "textcontent",
+                "label": "content"
+              }
+          ]
+        }
+      ],
       "presets": [
         {
           "name": "Custom image text"
@@ -84,7 +94,7 @@
       padding: 20px;
     }
     .content_text {
-      margin-top: 50px;
+      /* margin-top: 50px; */
     }
     .clsright {
       width: 50%;
