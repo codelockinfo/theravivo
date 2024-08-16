@@ -513,10 +513,50 @@
     },
     "custom_imagetext_MCqppX": {
       "type": "custom-imagetext",
+      "blocks": {
+        "accordian_pACa4i": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Nettoyez soigneusement votre visage<\/p>"
+          }
+        },
+        "accordian_736Rrc": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Mettez le masque LED Theravivo en place sur votre visage.<\/p>"
+          }
+        },
+        "accordian_RTFLXT": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Allumez le masque et sélectionnez le programme adapté à vos besoins.<\/p>"
+          }
+        },
+        "accordian_QtGjpd": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Relaxez-vous pendant 10 minutes pendant que le masque fait son effet.<\/p>"
+          }
+        },
+        "accordian_gmaeh4": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Utilisez le masque de 3 à 7 fois par semaine pour des résultats optimaux.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordian_pACa4i",
+        "accordian_736Rrc",
+        "accordian_RTFLXT",
+        "accordian_QtGjpd",
+        "accordian_gmaeh4"
+      ],
       "settings": {
         "heading": "How to use",
-        "subheading": "Comment utiliser votre Masque LED <br>Theravivo à Nano-Emission Photonique",
-        "blockheading": "Instructions d'utilisation:"
+        "subheading": "Comment utiliser votre Masque LED Theravivo à Nano-Emission Photonique",
+        "blockheading": "Instructions d'utilisation:",
+        "imglink": "shopify:\/\/shop_images\/Rectangle_100_1.png"
       }
     },
     "table_information_JeWW8F": {
