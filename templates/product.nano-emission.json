@@ -138,24 +138,6 @@
         "padding_bottom": 12
       }
     },
-    "1dbaa055bb07b838489c": {
-      "type": "apps",
-      "blocks": {
-        "fb0a37c7-82ba-456e-bbd0-1a1005d32f20": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "fb0a37c7-82ba-456e-bbd0-1a1005d32f20"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
     "multicolumn_ek6E67": {
       "type": "multicolumn",
       "blocks": {
@@ -212,92 +194,6 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "content": ""
-      }
-    },
-    "product_image_text_hLTeYz": {
-      "type": "product-image-text",
-      "settings": {
-      }
-    },
-    "product_collapse_dk83cU": {
-      "type": "product-collapse",
-      "blocks": {
-        "collapsible_row_bNMXdE": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_R3VJrX": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_cA6Pzb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_tcV8YA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_QYYJJH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_bNMXdE",
-        "collapsible_row_R3VJrX",
-        "collapsible_row_cA6Pzb",
-        "collapsible_row_tcV8YA",
-        "collapsible_row_QYYJJH"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Contenu réductible",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "scheme-2",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "product_video_gxqnE3": {
-      "type": "product-video",
-      "settings": {
-      }
-    },
-    "product_detail_faq_qefTb9": {
-      "type": "product-detail-faq",
-      "settings": {
       }
     },
     "related-products": {
@@ -581,7 +477,36 @@
     },
     "backgroundimage_accordian_UqYmDz": {
       "type": "backgroundimage-accordian",
+      "blocks": {
+        "accordian_z4cqNe": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "What is the Theravivo Masque LED?",
+            "accordiananswercontent": "<p>The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths of light to target various skin concerns such as wrinkles, acne, and pigmentation.<\/p>"
+          }
+        },
+        "accordian_H6rqQx": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "How does the Theravivo Masque LED work?",
+            "accordiananswercontent": "<p>The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths of light to target various skin concerns such as wrinkles, acne, and pigmentation.<\/p>"
+          }
+        },
+        "accordian_M4LNFy": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "How often should l use the Theravivo Masque LED?",
+            "accordiananswercontent": "<p>The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths of light to target various skin concerns such as wrinkles, acne, and pigmentation.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordian_z4cqNe",
+        "accordian_H6rqQx",
+        "accordian_M4LNFy"
+      ],
       "settings": {
+        "heading": "Frequently Asked Questions"
       }
     },
     "1723120433d2b39099": {
@@ -618,12 +543,7 @@
     "shogun-helper",
     "shogun-above",
     "main",
-    "1dbaa055bb07b838489c",
     "multicolumn_ek6E67",
-    "product_image_text_hLTeYz",
-    "product_collapse_dk83cU",
-    "product_video_gxqnE3",
-    "product_detail_faq_qefTb9",
     "related-products",
     "after_before_image_YYEaDD",
     "nano_photonic_yfC4fx",
