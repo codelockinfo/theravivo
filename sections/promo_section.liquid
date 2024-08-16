@@ -1,0 +1,277 @@
+<div class="promo_main_section">
+  <div class="custom_container">
+    <div class="promo-section">
+      <div class="promo-content">
+        <div class="mainheading">Transform Your Skin Today</div>
+        <div class="promo-icons">
+          <div class="icon-item">
+            <div class="icon_item_img_box">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Group_1000004462.png?v=1723646197"
+                class="promo_img"
+                alt="Feature 1"
+              >
+            </div>
+            <div class="promo_p">60 Day Money Back Guarantee</div>
+          </div>
+          <div class="icon-item">
+            <div class="icon_item_img_box">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/handshake_1.png?v=1723646197"
+                class="promo_img"
+                alt="Feature 2"
+              >
+            </div>
+            <div class="promo_p">700K Happy Customers</div>
+          </div>
+          <div class="icon-item">
+            <div class="icon_item_img_box">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/fast_1_1.png?v=1723646198"
+                class="promo_img"
+                alt="Feature 3"
+              >
+            </div>
+            <div class="promo_p">FREE Expected Shipping*</div>
+          </div>
+        </div>
+        <button class="shop-now-btn">Shop Now</button>
+      </div>
+      <div class="promo-image">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/beautiful-woman-portrait-skin-care-dermatology-portrait-female-touching-her-face-spa-girls-cosmetics_1.png?v=1723789649"
+          class="promo_img"
+          alt="Woman"
+        >
+        <div class="promo-rating">
+          <div class="promo_r_icon">
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+          </div>
+          <div class="promo_rp">Trusted by 700,000+ Customers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Promo section",
+  "class": "your-skin-text-section",
+  "presets": [
+    {
+      "name": "Promo section"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .promo_main_section {
+    margin-top: 225px;
+  }
+  .custom_container {
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .custom_container .mainheading {
+    color: #ffffff !important;
+    text-align: left !important;
+    margin-bottom: 40px;
+  }
+  .promo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a4a4a;
+    padding: 60px;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    /* height: 300px; */
+    /* overflow: hidden; */
+  }
+
+  .icon_item_img_box {
+    width: 60px;
+    height: 60px;
+    background-color: #868583;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon_item_img_box .promo_img {
+    padding: 10px;
+  }
+  .promo-content {
+    z-index: 2;
+    max-width: 50%;
+  }
+  .promo_r_icon {
+    display: flex;
+  }
+  .promo-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .promo_p {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .icon-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-item i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+
+  .shop-now-btn {
+    background-color: #fff;
+    color: #4b4b4b;
+    padding: 15px 30px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .promo-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .promo_r_icon i {
+    font-size: 20px;
+    color: #e76d28;
+  }
+  .promo-image img {
+    max-width: 70%;
+    height: auto;
+    object-fit: cover;
+    object-position: right;
+    position: absolute;
+    bottom: 0;
+    right: 10%; /* Adjust this value to fine-tune image position */
+  }
+
+  .promo-rating {
+    background-color: #ffffff94;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 1rem;
+    position: relative;
+    z-index: 3;
+    margin-right: 63px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(6px);
+  }
+
+  .promo-rating .promo_rp {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4b4b4b;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+  }
+
+  @media (max-width: 1240px) {
+    .promo-image img {
+      max-width: 100%;
+      right: -2%;
+    }
+    .promo_main_section {
+      margin-top: 144px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .promo-rating {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .promo-section {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+    }
+
+    .promo-content,
+    .promo-image {
+      max-width: 100%;
+    }
+    .promo-content {
+      order: 2;
+    }
+
+    .promo-content h1 {
+      font-size: 2rem;
+    }
+
+    .promo-icons {
+      flex-direction: column;
+    }
+
+    .icon-item {
+      margin-bottom: 10px;
+    }
+
+    .promo-image {
+      position: static;
+      margin-top: 20px;
+      width: 100%;
+      height: auto;
+      order: 1;
+    }
+    .promo_main_section {
+      margin-top: 30px;
+    }
+    .promo-image img {
+      object-position: center;
+      right: 0;
+      position: relative;
+    }
+
+    .promo-rating {
+      position: static;
+      margin-top: 10px;
+      /* margin: 0 auto; */
+      position: absolute;
+    }
+  }
+  @media (max-width: 576px) {
+    .promo-rating {
+      left: 5%;
+      right: 5%;
+      padding: 15px;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 400px) {
+    .promo-rating .promo_rp {
+      font-size: 14px;
+    }
+  }
+</style>
