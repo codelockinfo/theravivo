@@ -47,7 +47,12 @@
 .mb-50{
     margin-bottom: 50px;
 }
-
+.custommumulticolumn .title-wrapper-with-link{
+    justify-content: center;
+}
+.custommumulticolumn .multicolumn-card__image-wrapper{
+    margin: 0 auto;
+}
 @media screen and (max-width: 768px) {
     .mainheading{
         font-size: 26px !important;
