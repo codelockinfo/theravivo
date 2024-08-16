@@ -177,6 +177,7 @@
         "column_ymp6df",
         "column_ygPtVF"
       ],
+      "disabled": true,
       "settings": {
         "custom_cl": "",
         "title": "<h2>Vu dans<\/h2>",
@@ -190,6 +191,64 @@
         "button_link": "",
         "color_scheme": "scheme-1",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "content": ""
+      }
+    },
+    "logoimage_QWBmkT": {
+      "type": "logoimage",
+      "blocks": {
+        "column_t86MJB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Glamour_logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ajwpzb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Womenshealthlogo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YdRka7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/thestrategist_k-_1_-_2.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_t86MJB",
+        "column_ajwpzb",
+        "column_YdRka7"
+      ],
+      "settings": {
+        "custom_cl": "",
+        "title": "comme on peut le voir dans",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Texte du bouton",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36,
@@ -669,6 +728,7 @@
     "shogun-above",
     "main",
     "multicolumn_ek6E67",
+    "logoimage_QWBmkT",
     "related-products",
     "after_before_image_YYEaDD",
     "nano_photonic_yfC4fx",
