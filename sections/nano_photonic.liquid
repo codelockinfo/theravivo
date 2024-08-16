@@ -2,7 +2,7 @@
 <div class="Nano_Photonic_section" style="background-image: url('{{ section.settings.bgimg | img_url:'master' }} '); ">
   <div class="container page-width">
       <div class="Nano_content">
-         <h1 class="Nano_h1">{{ section.settings.nanoh1 }}</h1>
+         <h1 class="mainheading">{{ section.settings.nanoh1 }}</h1>
          <p class="Nano_p">{{ section.settings.nanop1 }}</p>
          <p class="Nano_p">{{ section.settings.nanop2 }}</p>
       </div>
@@ -43,7 +43,7 @@
            "type": "text",
            "id": "nanop2",
            "label": "Paragraph 2"
-         },
+         }
     ],
     "blocks": [
     {
@@ -84,16 +84,15 @@
     .Nano_content{
       text-align:center;
     }
-    .Nano_content .Nano_h1{
+    .Nano_content .mainheading{
       color:#ffffff  !important;
-      font-size: 48px;
-      font-weight: bold;
     }
     .Nano_content .Nano_p{
       color:#ffffff  !important;
        font-size: 20px;
        font-weight: 300;
        font-family: "Poppins", sans-serif;
+       line-height: 28px;
     }
     .Nano_details_box .nano_content_box{
         font-size:20px;
@@ -154,6 +153,9 @@
   .Nano_details_box .nano_content_box{
         font-size:16px;
     }
+    .Nano_content .Nano_p{
+       font-size: 16px;
+    }
 }
 @media (max-width:768px){
   .Nano_Photonic_section{
@@ -163,6 +165,7 @@
     .Nano_Photonic_details{
     top: 76%;
   }
+
 }
 @media (min-width:650px){
   .Nano_Photonic_details{
