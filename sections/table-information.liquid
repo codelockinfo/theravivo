@@ -1,72 +1,19 @@
 <div class="table-container">
-    <div class="mainheading white1"> Compare Theravivo's system to other anti-aging treatments</div>
+    {% if section.settings.heading != blank %}<div class="mainheading white1"> {{ section.settings.heading }} </div> {% endif %}
     <div class="boxpadding">
         <div class="comparison-table">
-        <div class="clsrows customheader">
-            <div class="customcell">CaracterIstique</div>
-            <div class="customcell">Theravivo</div>
-            <div class="customcell">Autres</div>
-        </div>
-        <div class="clsrows firstclsrows">
-            <div class="customcell">Technologie</div>
-            <div class="customcell">Nano-Emission Photonique</div>
-            <div class="customcell">LED standard</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Penetration</div>
-            <div class="customcell">3 couches de peau</div>
-            <div class="customcell">1-2 couches</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Boost collagene</div>
-            <div class="customcell">+84,91% en 3 semaines</div>
-            <div class="customcell">Inferieur, variable</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Séance</div>
-            <div class="customcell">10 minutes</div>
-            <div class="customcell">15-30 minutes</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Frequence</div>
-            <div class="customcell">3x/semaine</div>
-            <div class="customcell">Souvent quotidien</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Nombre de LED</div>
-            <div class="customcell">150 haute puissance</div>
-            <div class="customcell">&lt;100 typiquement</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Spectre lumineux</div>
-            <div class="customcell">Rouge + infrarouge proche</div>
-            <div class="customcell">Souvent monochrome</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Personnalisation</div>
-            <div class="customcell">Programmes multiples</div>
-            <div class="customcell">Limitee/aucune</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Securite</div>
-            <div class="customcell">Sans UV, teste derma</div>
-            <div class="customcell">Varie</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Comfort</div>
-            <div class="customcell">Ergonomique, sans fil</div>
-            <div class="customcell">Souvent encombrant/filiaire</div>
-        </div>
-        <div class="clsrows">
-            <div class="customcell">Garantie</div>
-            <div class="customcell">2 ans</div>
-            <div class="customcell">Generalement &lt;1 an</div>
-        </div>
-        <div class="clsrows secondclsrows">
-            <div class="customcell">Prix</div>
-            <div class="customcell">Premium</div>
-            <div class="customcell">Variable, souvent moins</div>
-        </div>
+          <div class="clsrows customheader">
+              {% if section.settings.heading1text != blank %} <div class="customcell">{{ section.settings.heading1text }}</div>{% endif %}
+              {% if section.settings.heading2text != blank %}  <div class="customcell">{{ section.settings.heading2text }}</div>{% endif %}
+              {% if section.settings.heading3text != blank %}  <div class="customcell">{{ section.settings.heading3text }}</div>{% endif %}
+          </div>
+          {% for block in section.blocks %}
+            <div class="clsrows {% if forloop.index == 1 %}firstclsrows{% endif %} {% if forloop.last %} secondclsrows{% endif %}">
+                <div class="customcell">{{ block.settings.column1text }}</div>
+                <div class="customcell">{{ block.settings.column2text }}</div>
+                <div class="customcell">{{ block.settings.column3text }}</div>
+            </div>
+          {% endfor %}
         </div>
     </div>
   </div>
@@ -75,6 +22,52 @@
     {
       "name": "Table information",
       "class": "table-information-section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Compare Theravivo's system to other anti-aging treatments",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "heading1text",
+          "label": "Heading1 text"
+        },
+        {
+          "type": "text",
+          "id": "heading2text",
+          "label": "Heading2 text"
+        },
+        {
+          "type": "text",
+          "id": "heading3text",
+          "label": "Heading3 text"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "tabledata",
+          "name": "Table Row Data",
+          "settings": [
+              {
+                "type": "text",
+                "id": "column1text",
+                "label": "Column1 text"
+              },
+              {
+                "type": "text",
+                "id": "column2text",
+                "label": "Column2 text"
+              },
+              {
+                "type": "text",
+                "id": "column3text",
+                "label": "Column3 text"
+              }
+          ]
+        }
+      ],
       "presets": [
         {
           "name": "Table information"
