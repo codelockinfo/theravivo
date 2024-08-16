@@ -1,133 +1,135 @@
 <div class="custom-bgimage">
-        <div class="accordion_section">
-            <div class="accordion_heading mainheading">frequently asked questions</div>
-            <div class="accordion">
-            What is the Theravivo Masque LED?<i
-                class="fas fa-chevron-down accordion_icon"
-            ></i>
-            </div>
-            <div class="accordion-content">
-            <p class="accordion-paragraph">
-                The Theravivo Masque LED is a light therapy mask designed to improve
-                skin health by using specific wavelengths of light to target various
-                skin concerns such as wrinkles, acne, and pigmentation.
-            </p>
-            </div>
-            <div class="accordion">
-            How does the Theravivo Masque LED work?
-            <i class="fas fa-chevron-down accordion_icon"></i>
-            </div>
-            <div class="accordion-content">
-            <p class="accordion-paragraph">
-                The Theravivo Masque LED is a light therapy mask designed to improve
-                skin health by using specific wavelengths of light to target various
-                skin concerns such as wrinkles, acne, and pigmentation.
-            </p>
-            </div>
-            <div class="accordion">
-            How often should I use the Theravivo Masque LED?
-            <i class="fas fa-chevron-down accordion_icon"></i>
-            </div>
-            <div class="accordion-content">
-            <p class="accordion-paragraph">
-                The Theravivo Masque LED is a light therapy mask designed to improve
-                skin health by using specific wavelengths of light to target various
-                skin concerns such as wrinkles, acne, and pigmentation.
-            </p>
-            </div>
-        </div>
+  <div class="accordion_section">
+    <div class="accordion_heading mainheading">frequently asked questions</div>
+    <div class="accordion">
+      What is the Theravivo Masque LED?
+      <i class="fa-sharp fa-solid fa-caret-down a_arrow"></i>
+    </div>
+    <div class="accordion-content">
+      <p class="accordion-paragraph">
+        The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths
+        of light to target various skin concerns such as wrinkles, acne, and pigmentation.
+      </p>
+    </div>
+    <div class="accordion">
+      How does the Theravivo Masque LED work?
+      <i class="fa-sharp fa-solid fa-caret-down a_arrow"></i>
+    </div>
+    <div class="accordion-content">
+      <p class="accordion-paragraph">
+        The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths
+        of light to target various skin concerns such as wrinkles, acne, and pigmentation.
+      </p>
+    </div>
+    <div class="accordion">
+      How often should I use the Theravivo Masque LED?
+      <i class="fa-sharp fa-solid fa-caret-down a_arrow"></i>
+    </div>
+    <div class="accordion-content">
+      <p class="accordion-paragraph">
+        The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths
+        of light to target various skin concerns such as wrinkles, acne, and pigmentation.
+      </p>
+    </div>
+  </div>
 </div>
 {% schema %}
+{
+  "name": "Bg image accordian",
+  "class": "background-image-accordian-section",
+  "presets": [
     {
-      "name": "Bg image accordian",
-      "class": "background-image-accordian-section",
-      "presets": [
-        {
-          "name": "Bg image accordian"
-        }
-      ]
+      "name": "Bg image accordian"
     }
+  ]
+}
 {% endschema %}
 <style>
-    .custom-bgimage {
-      background-image: url("https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Rectangle_33_1.png?v=1723642915");
-      background-repeat: no-repeat;
-      background-size: cover;
-      max-width: 100%;
-      /* height: 1000px; */
-    }
+  .custom-bgimage {
+    background-image: url('https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Rectangle_33_1.png?v=1723642915');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    /* height: 1000px; */
+  }
 
-    .accordion_section {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      margin-left: 40%;
-      margin-top: 5%;
-      padding: 150px 20px;
-    }
+  .accordion_section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 40%;
+    margin-top: 5%;
+    padding: 150px 20px;
+  }
 
-    .accordion_heading {
-      display: flex;
-      flex-direction: column;
-      font-size: 32px;
-      color: black;
-      text-transform: capitalize;
-      font-weight: 600;
-    }
+  .accordion_heading {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
 
-    .accordion {
-      max-width: 100%;
-      border: none;
-      background-color: rgb(230, 230, 229);
-      outline: none;
-      text-align: left;
-      padding: 20px 20px;
-      margin: 10px 0px;
-      font-size: 16px;
-      border-radius: 10px;
-      font-weight: 600;
-      color: black;
-      cursor: pointer;
-      transition: background-color 0.2s linear;
-    }
+  .accordion {
+    max-width: 100%;
+    border: none;
+    background-color: #efede9;
+    outline: none;
+    text-align: left;
+    padding: 20px 20px;
+    margin: 10px 0px;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .accordion_icon {
-      font-size: 18px;
-      float: right;
-    }
+  .accordion_icon {
+    font-size: 18px;
+    float: right;
+  }
 
-    .accordion.is-open:after {
-      content: "\f151";
-    }
-    .accordion.is-open {
-      background-color: #efede9;
-      border-bottom: 1px solid #808194;
-      border-bottom-left-radius: 0px !important;
-      border-bottom-right-radius: 0px !important;
-    }
+  .accordion.is-open {
+    background-color: #efede9;
+    border-bottom: 1px solid #808194;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    transition: all 0.7s;
+  }
+  .accordion.is-open .a_arrow{
+    rotate: 180deg;
+    transition: all 0.7s;
+    
+  }
+  .a_arrow{
+    color: #A4A29F;
+  }
+  .accordion-content {
+    color: black;
+    padding: 0px 20px;
+    background-color: #efede9;
+    margin-top: -10px !important;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0px 0px 10px 10px;
+    transition: max-height 0.2s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-    .accordion-content {
-      color: black;
-      padding: 0px 20px;
-      background-color: rgb(230, 230, 229);
-      margin-top: -10px !important;
-      max-height: 0;
-      overflow: hidden;
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 10px;
-      opacity: 0.6;
-      transition: max-height 0.2s ease-in-out;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .accordion-paragraph {
-      padding: 15px;
-    }
+  .accordion-paragraph {
+    padding: 15px;
+  }
 
   @media (max-width: 768px) {
-    .accordion_section{
+    .accordion_section {
       width: 100%;
       padding: 20px;
       margin-left: unset;
@@ -135,30 +137,30 @@
       padding: 50px 20px;
     }
 
-    .custom-bgimage{
-      background-image: url("https://cdn.shopify.com/s/files/1/0826/8857/3779/files/image_2024_08_14T14_52_11_455Z.png?v=1723647160");
-      background-size: contain;
+    .custom-bgimage {
+      background-image: url('https://cdn.shopify.com/s/files/1/0826/8857/3779/files/image_2024_08_14T14_52_11_455Z.png?v=1723647160');
+      background-size: cover;
     }
   }
-  </style>
-  <script>
-     const accordionBtns = document.querySelectorAll(".accordion");
+</style>
+<script>
+  const accordionBtns = document.querySelectorAll('.accordion');
 
-accordionBtns.forEach((accordion) => {
-  accordion.onclick = function () {
-    this.classList.toggle("is-open");
+  accordionBtns.forEach((accordion) => {
+    accordion.onclick = function () {
+      this.classList.toggle('is-open');
 
-    let content = this.nextElementSibling;
-    console.log(content);
+      let content = this.nextElementSibling;
+      console.log(content);
 
-    if (content.style.maxHeight) {
-      //this is if the accordion is open
-      content.style.maxHeight = null;
-    } else {
-      //if the accordion is currently closed
-      content.style.maxHeight = content.scrollHeight + "px";
-      console.log(content.style.maxHeight);
-    }
-  };
-});
-  </script>
+      if (content.style.maxHeight) {
+        //this is if the accordion is open
+        content.style.maxHeight = null;
+      } else {
+        //if the accordion is currently closed
+        content.style.maxHeight = content.scrollHeight + 'px';
+        console.log(content.style.maxHeight);
+      }
+    };
+  });
+</script>
