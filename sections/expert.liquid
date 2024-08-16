@@ -74,7 +74,7 @@
 
 <style>
   .expert_section {
-    padding: 80px;
+    padding: 80px 0;
     background: rgb(239, 237, 233);
     background: linear-gradient(180deg, rgba(239, 237, 233, 1) 47%, rgba(255, 255, 255, 1) 100%);
   }
@@ -120,6 +120,7 @@
     background-color: #ffffff;
     border: 1px solid #fff;
     transition: all 0.7s;
+    background-size: cover;
   }
 
   .expert_content_box:hover {
@@ -128,7 +129,7 @@
 
   .expert_content_box .expert-img {
     position: absolute;
-    top: -12%;
+    top: -19%;
     left: 32%;
     right: 32%;
   }
@@ -154,12 +155,44 @@
     line-height: 27px;
   }
   
-  @media screen and (max-width: 768px) {
+  @media (max-width: 1024px) {
     .expert_content_box .expert-img{
-      left: 20%;
-      right: 20%;
-      top: -12%;
-
+      left: 26%;
+      right: 26%;
+    }
+  }
+  @media  (min-width: 767px) and (max-width: 991px) {
+    .expert_content_box .expert-img{
+      left: 33%;
+      right: 35%;
+      top: -19%;
+    }
+  }
+  @media (max-width: 767px) {
+    .expert_content_box .expert-img{
+      left: 39%;
+      right: 39%;
+      top: -24%;
+    }
+  }
+  @media (max-width: 500px) {
+    .expert_content_box .expert-img{
+      left: 37%;
+      right: 39%;
+      top: -21%;
+    }
+  }
+  @media (max-width: 419px) {
+    .expert_content_box .expert-img{
+      left: 34%;
+    }
+  }
+  @media (max-width: 375px) {
+    .expert_content_box .expert-img{
+      left: 33%;
+      /* right: 39%; */
+      top: -16%;
+      width: 35%;
     }
   }
 </style>
