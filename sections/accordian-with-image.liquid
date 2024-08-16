@@ -1,60 +1,29 @@
 <div class="mainaccordian-section">
-  <div class="mainheading white1">Results over time</div>
+  {% if section.settings.heading !=  blank %}<h2 class="mainheading white1">{{ section.settings.heading }}</h2>{% endif %}
   <div class="accordian-customwidth">
     <div class="accordian-section">
       <div class="width50">
-        <details open>
-          <summary class="accordianheading">Week 1</summary>
-          <div class="customcontent">
-            <div class="accordiancontentheading">Lorem ipsum dolor sit amet</div>
-            <div class="accordiancontent">
-              Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
-              facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum
-              dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent
-              ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam
-            </div>
-          </div>
-        </details>
-        <details>
-          <summary class="accordianheading">Week 2</summary>
-          <div class="customcontent">
-            <div class="accordiancontentheading">Lorem ipsum dolor sit amet</div>
-            <div class="accordiancontent">
-              Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
-              facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum
-              dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent
-              ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam
-            </div>
-          </div>
-        </details>
-        <details>
-          <summary class="accordianheading">Week 3</summary>
-          <div class="customcontent">
-            <div class="accordiancontentheading">Lorem ipsum dolor sit amet</div>
-            <div class="accordiancontent">
-              Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
-              facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum
-              dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent
-              ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam
-            </div>
-          </div>
-        </details>
-        <details>
-          <summary class="accordianheading">Week 4</summary>
-          <div class="customcontent">
-            <div class="accordiancontentheading">Lorem ipsum dolor sit amet</div>
-            <div class="accordiancontent">
-              Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur
-              facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum
-              dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent
-              ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam
-            </div>
-          </div>
-        </details>
+        {% for block in section.blocks %}
+          {% if block.settings.accordianquestion !=  blank %}
+            <details name="accordion-demo" {% if forloop.index == 1 %} open{% endif %}>
+              <summary class="accordianheading">{{ block.settings.accordianquestion }}</summary>
+              <div class="customcontent">
+                  {% if block.settings.accordiananswerheading  != blank %} <div class="accordiancontentheading">{{ block.settings.accordiananswerheading }}</div>{% endif %}
+                  {% if block.settings.accordiananswercontent != blank %}
+                    <div class="accordiancontent">
+                      {{ block.settings.accordiananswercontent }}
+                    </div>
+                  {% endif %}
+              </div>
+            </details>
+          {% endif %}
+        {% endfor %}
       </div>
-      <div class="width50">
-        <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/abc.png?v=1723700594" class="faceimg">
-      </div>
+      {% if section.settings.imglink  != blank %}
+        <div class="width50">
+          <img src="{{ section.settings.imglink | img_url:'master' }}" class="faceimg">
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -62,6 +31,42 @@
 {
   "name": "Accordian with image",
   "class": "accordian-with-image",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Results over time",
+      "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "imglink",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordian",
+      "name": "Accordian",
+      "settings": [
+          {
+            "type": "text",
+            "id": "accordianquestion",
+            "label": "Accordian Question"
+          },
+          {
+            "type": "richtext",
+            "id": "accordiananswerheading",
+            "label": "Accordian Answer Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "accordiananswercontent",
+            "label": "Accordian Answer content"
+          }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Accordian with image"
@@ -123,6 +128,8 @@
   @media screen and (max-width: 768px) {
     .accordian-section {
       flex-wrap: wrap;
+      padding-left: 20px;
+      padding-right: 20px;
     }
     .width50 {
       width: 100%;

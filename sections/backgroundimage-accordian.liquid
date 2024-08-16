@@ -1,42 +1,63 @@
-<div class="custom-bgimage">
+{% if section.settings.imglink != blank %}<div class="custom-bgimage">{% endif %}
   <div class="accordion_section">
-    <div class="accordion_heading mainheading">frequently asked questions</div>
-    <div class="accordion">
-      What is the Theravivo Masque LED?
-      <i class="fa-sharp fa-solid fa-caret-down a_arrow"></i>
-    </div>
-    <div class="accordion-content">
-      <p class="accordion-paragraph">
-        The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths
-        of light to target various skin concerns such as wrinkles, acne, and pigmentation.
-      </p>
-    </div>
-    <div class="accordion">
-      How does the Theravivo Masque LED work?
-      <i class="fa-sharp fa-solid fa-caret-down a_arrow"></i>
-    </div>
-    <div class="accordion-content">
-      <p class="accordion-paragraph">
-        The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths
-        of light to target various skin concerns such as wrinkles, acne, and pigmentation.
-      </p>
-    </div>
-    <div class="accordion">
-      How often should I use the Theravivo Masque LED?
-      <i class="fa-sharp fa-solid fa-caret-down a_arrow"></i>
-    </div>
-    <div class="accordion-content">
-      <p class="accordion-paragraph">
-        The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths
-        of light to target various skin concerns such as wrinkles, acne, and pigmentation.
-      </p>
-    </div>
+    {% if section.settings.heading != blank %}<div class="accordion_heading mainheading">{{ section.settings.heading }}</div> {% endif %}
+      {% for block in section.blocks %}
+         {% if block.settings.accordianquestion != blank %}
+            <div class="accordion">
+              {{ block.settings.accordianquestion }}
+              <i class="fa-sharp fa-solid fa-caret-down a_arrow"></i>
+            </div>
+            <div class="accordion-content">
+              {% if block.settings.accordiananswercontent != blank %}
+                  <div class="accordion-paragraph">
+                  {{ block.settings.accordiananswercontent }}
+                  </div>
+              {% endif %}
+            </div>
+          {% endif %}
+      {% endfor %}
   </div>
-</div>
+{% if section.settings.imglink != blank %}</div> {% endif %}
 {% schema %}
 {
   "name": "Bg image accordian",
   "class": "background-image-accordian-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Frequently Asked Questions",
+      "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "imglink",
+      "label": "Background Image of Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "imglinkmob",
+      "label": "Background Image of Mobile"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordian",
+      "name": "Accordian",
+      "settings": [
+          {
+            "type": "text",
+            "id": "accordianquestion",
+            "label": "Accordian Question"
+          },
+          {
+            "type": "richtext",
+            "id": "accordiananswercontent",
+            "label": "Accordian Answer content"
+          }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Bg image accordian"
@@ -45,12 +66,12 @@
 }
 {% endschema %}
 <style>
-  .custom-bgimage {
-    background-image: url('https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Rectangle_33_1.png?v=1723642915');
+  .custom-bgimage {    
+    background-image: url('{{ section.settings.imglink  | img_url: 'master' }}');
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    /* height: 1000px; */
+    height: 850px;
   }
 
   .accordion_section {
@@ -138,8 +159,9 @@
     }
 
     .custom-bgimage {
-      background-image: url('https://cdn.shopify.com/s/files/1/0826/8857/3779/files/image_2024_08_14T14_52_11_455Z.png?v=1723647160');
+      background-image: url('{{ section.settings.imglinkmob  | img_url: 'master' }}');
       background-size: cover;
+      height: auto;
     }
   }
 </style>

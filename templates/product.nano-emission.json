@@ -138,24 +138,6 @@
         "padding_bottom": 12
       }
     },
-    "1dbaa055bb07b838489c": {
-      "type": "apps",
-      "blocks": {
-        "fb0a37c7-82ba-456e-bbd0-1a1005d32f20": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "fb0a37c7-82ba-456e-bbd0-1a1005d32f20"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
     "multicolumn_ek6E67": {
       "type": "multicolumn",
       "blocks": {
@@ -214,92 +196,6 @@
         "content": ""
       }
     },
-    "product_image_text_hLTeYz": {
-      "type": "product-image-text",
-      "settings": {
-      }
-    },
-    "product_collapse_dk83cU": {
-      "type": "product-collapse",
-      "blocks": {
-        "collapsible_row_bNMXdE": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_R3VJrX": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_cA6Pzb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_tcV8YA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_QYYJJH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Rangée réductible",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_bNMXdE",
-        "collapsible_row_R3VJrX",
-        "collapsible_row_cA6Pzb",
-        "collapsible_row_tcV8YA",
-        "collapsible_row_QYYJJH"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Contenu réductible",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "scheme-2",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "product_video_gxqnE3": {
-      "type": "product-video",
-      "settings": {
-      }
-    },
-    "product_detail_faq_qefTb9": {
-      "type": "product-detail-faq",
-      "settings": {
-      }
-    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -321,7 +217,27 @@
     },
     "after_before_image_YYEaDD": {
       "type": "after-before-image",
+      "blocks": {
+        "images_fzyAgy": {
+          "type": "images",
+          "settings": {
+            "beforeimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.19_70931ec8_2.jpg",
+            "beforelabel": "Before",
+            "afterimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.25_f757e0bc_1_6dd7bbca-268e-4fcd-ab1c-55f770967d40.jpg",
+            "afterlabel": "After"
+          }
+        }
+      },
+      "block_order": [
+        "images_fzyAgy"
+      ],
       "settings": {
+        "heading": "Lorem ipsum dolor sit amet",
+        "subheading": "Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut",
+        "text1": "Cynthia - Verified buyer In clinical studies, users experienced:",
+        "text2": "Witnessed a considerable impr ovement in skin firmness and fullness.",
+        "text3": "Noticed skin appearing plumper and more vibrant after just 4 weeks.",
+        "text4": "23 out of 25 participants reported their skin felt firmer after 3 treatments per week for 4 weeks."
       }
     },
     "nano_photonic_yfC4fx": {
@@ -447,17 +363,227 @@
     },
     "accordian_with_image_wrGaeq": {
       "type": "accordian-with-image",
+      "blocks": {
+        "accordian_Q6ebdE": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "Week 1",
+            "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
+            "accordiananswercontent": "<p>Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam<\/p>"
+          }
+        },
+        "accordian_wUDU8y": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "Week 2",
+            "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
+            "accordiananswercontent": "<p>Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam<\/p>"
+          }
+        },
+        "accordian_fgTebi": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "Week 3",
+            "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
+            "accordiananswercontent": "<p>Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam<\/p>"
+          }
+        },
+        "accordian_6Bw4B9": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "Week 4",
+            "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
+            "accordiananswercontent": "<p>Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam<\/p>"
+          }
+        },
+        "accordian_HDNDFk": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "Week 5",
+            "accordiananswerheading": "<p>Lorem ipsum dolor sit amet<\/p>",
+            "accordiananswercontent": "<p>Lorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut namLorem ipsum dolor sit amet, pro petentium consulatu cu, etiam numquam scriptorem sed ei. Mel labitur facilisi praesent ut, an brute facilisis has. Sea ne nusquam liberavisse, putent bonorum ut nam<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordian_Q6ebdE",
+        "accordian_wUDU8y",
+        "accordian_fgTebi",
+        "accordian_6Bw4B9",
+        "accordian_HDNDFk"
+      ],
       "settings": {
+        "heading": "Results over time",
+        "imglink": "shopify:\/\/shop_images\/abc.png"
       }
     },
     "custom_imagetext_MCqppX": {
       "type": "custom-imagetext",
+      "blocks": {
+        "accordian_pACa4i": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Nettoyez soigneusement votre visage<\/p>"
+          }
+        },
+        "accordian_736Rrc": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Mettez le masque LED Theravivo en place sur votre visage.<\/p>"
+          }
+        },
+        "accordian_RTFLXT": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Allumez le masque et sélectionnez le programme adapté à vos besoins.<\/p>"
+          }
+        },
+        "accordian_QtGjpd": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Relaxez-vous pendant 10 minutes pendant que le masque fait son effet.<\/p>"
+          }
+        },
+        "accordian_gmaeh4": {
+          "type": "accordian",
+          "settings": {
+            "textcontent": "<p>Utilisez le masque de 3 à 7 fois par semaine pour des résultats optimaux.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordian_pACa4i",
+        "accordian_736Rrc",
+        "accordian_RTFLXT",
+        "accordian_QtGjpd",
+        "accordian_gmaeh4"
+      ],
       "settings": {
+        "heading": "How to use",
+        "subheading": "Comment utiliser votre Masque LED Theravivo à Nano-Emission Photonique",
+        "blockheading": "Instructions d'utilisation:",
+        "imglink": "shopify:\/\/shop_images\/Rectangle_100_1.png"
       }
     },
     "table_information_JeWW8F": {
       "type": "table-information",
+      "blocks": {
+        "tabledata_ngfBWQ": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Technologie",
+            "column2text": "Nano-Emission Photonique",
+            "column3text": "LED standard"
+          }
+        },
+        "tabledata_Vf7d4B": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Penetration",
+            "column2text": "3 couches de peau",
+            "column3text": "1-2 couches"
+          }
+        },
+        "tabledata_jHWKfX": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Boost collagene",
+            "column2text": "+84,91% en 3 semaines",
+            "column3text": "Inferieur, variable"
+          }
+        },
+        "tabledata_AGiFjE": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Séance",
+            "column2text": "10 minutes",
+            "column3text": "15-30 minutes"
+          }
+        },
+        "tabledata_QzXGBg": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Frequence",
+            "column2text": "3x\/semaine",
+            "column3text": "Souvent quotidien"
+          }
+        },
+        "tabledata_ynLYfh": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Nombre de LED",
+            "column2text": "150 haute puissance",
+            "column3text": "&lt;100 typiquement"
+          }
+        },
+        "tabledata_mdjKBh": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Spectre lumineux",
+            "column2text": "Rouge + infrarouge proche",
+            "column3text": "Souvent monochrome"
+          }
+        },
+        "tabledata_34MzHQ": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Personnalisation",
+            "column2text": "Programmes multiples",
+            "column3text": "Limitee\/aucune"
+          }
+        },
+        "tabledata_hCHpE9": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Securite",
+            "column2text": "Sans UV, teste derma",
+            "column3text": "Varie"
+          }
+        },
+        "tabledata_mX3pNa": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Comfort",
+            "column2text": "Ergonomique, sans fil",
+            "column3text": "Souvent encombrant\/filiaire"
+          }
+        },
+        "tabledata_EaQQz3": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Garantie",
+            "column2text": "2 ans",
+            "column3text": "Generalement &lt;1 an"
+          }
+        },
+        "tabledata_pF7jAy": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Prix",
+            "column2text": "Premium",
+            "column3text": "Variable, souvent moins"
+          }
+        }
+      },
+      "block_order": [
+        "tabledata_ngfBWQ",
+        "tabledata_Vf7d4B",
+        "tabledata_jHWKfX",
+        "tabledata_AGiFjE",
+        "tabledata_QzXGBg",
+        "tabledata_ynLYfh",
+        "tabledata_mdjKBh",
+        "tabledata_34MzHQ",
+        "tabledata_hCHpE9",
+        "tabledata_mX3pNa",
+        "tabledata_EaQQz3",
+        "tabledata_pF7jAy"
+      ],
       "settings": {
+        "heading": "Compare Theravivo's system to other anti-aging treatments",
+        "heading1text": "Caracterlstique",
+        "heading2text": "Theravivo",
+        "heading3text": "Autres"
       }
     },
     "your_sckin_FmEQ89": {
@@ -467,7 +593,38 @@
     },
     "backgroundimage_accordian_UqYmDz": {
       "type": "backgroundimage-accordian",
+      "blocks": {
+        "accordian_z4cqNe": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "What is the Theravivo Masque LED?",
+            "accordiananswercontent": "<p>The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths of light to target various skin concerns such as wrinkles, acne, and pigmentation.<\/p>"
+          }
+        },
+        "accordian_H6rqQx": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "How does the Theravivo Masque LED work?",
+            "accordiananswercontent": "<p>The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths of light to target various skin concerns such as wrinkles, acne, and pigmentation.<\/p>"
+          }
+        },
+        "accordian_M4LNFy": {
+          "type": "accordian",
+          "settings": {
+            "accordianquestion": "How often should l use the Theravivo Masque LED?",
+            "accordiananswercontent": "<p>The Theravivo Masque LED is a light therapy mask designed to improve skin health by using specific wavelengths of light to target various skin concerns such as wrinkles, acne, and pigmentation.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordian_z4cqNe",
+        "accordian_H6rqQx",
+        "accordian_M4LNFy"
+      ],
       "settings": {
+        "heading": "Frequently Asked Questions",
+        "imglink": "shopify:\/\/shop_images\/Rectangle_33.png",
+        "imglinkmob": "shopify:\/\/shop_images\/image_2024_08_14T14_52_11_455Z.webp"
       }
     },
     "1723120433d2b39099": {
@@ -504,12 +661,7 @@
     "shogun-helper",
     "shogun-above",
     "main",
-    "1dbaa055bb07b838489c",
     "multicolumn_ek6E67",
-    "product_image_text_hLTeYz",
-    "product_collapse_dk83cU",
-    "product_video_gxqnE3",
-    "product_detail_faq_qefTb9",
     "related-products",
     "after_before_image_YYEaDD",
     "nano_photonic_yfC4fx",
