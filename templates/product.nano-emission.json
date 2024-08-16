@@ -519,9 +519,49 @@
         "tabledata_mdjKBh": {
           "type": "tabledata",
           "settings": {
-            "column1text": "Nombre de LED",
-            "column2text": "150 haute puissance",
-            "column3text": "&lt;100 typiquement"
+            "column1text": "Spectre lumineux",
+            "column2text": "Rouge + infrarouge proche",
+            "column3text": "Souvent monochrome"
+          }
+        },
+        "tabledata_34MzHQ": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Personnalisation",
+            "column2text": "Programmes multiples",
+            "column3text": "Limitee\/aucune"
+          }
+        },
+        "tabledata_hCHpE9": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Securite",
+            "column2text": "Sans UV, teste derma",
+            "column3text": "Varie"
+          }
+        },
+        "tabledata_mX3pNa": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Comfort",
+            "column2text": "Ergonomique, sans fil",
+            "column3text": "Souvent encombrant\/filiaire"
+          }
+        },
+        "tabledata_EaQQz3": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Garantie",
+            "column2text": "2 ans",
+            "column3text": "Generalement &lt;1 an"
+          }
+        },
+        "tabledata_pF7jAy": {
+          "type": "tabledata",
+          "settings": {
+            "column1text": "Prix",
+            "column2text": "Premium",
+            "column3text": "Variable, souvent moins"
           }
         }
       },
@@ -532,7 +572,12 @@
         "tabledata_AGiFjE",
         "tabledata_QzXGBg",
         "tabledata_ynLYfh",
-        "tabledata_mdjKBh"
+        "tabledata_mdjKBh",
+        "tabledata_34MzHQ",
+        "tabledata_hCHpE9",
+        "tabledata_mX3pNa",
+        "tabledata_EaQQz3",
+        "tabledata_pF7jAy"
       ],
       "settings": {
         "heading": "Compare Theravivo's system to other anti-aging treatments",
