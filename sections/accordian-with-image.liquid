@@ -2,13 +2,16 @@
   {% if section.settings.heading !=  blank %}<h2 class="mainheading white1">{{ section.settings.heading }}</h2>{% endif %}
   <div class="accordian-customwidth">
     <div class="accordian-section">
-      <div class="width50">
+      <div class="week_img width10">
+        <img src="https://cdn.shopify.com/s/files/1/0826/8857/3779/files/Group_31.png?v=1723805160" class="w_img" alt="">
+      </div>
+      <div class="width40">
         {% for block in section.blocks %}
           {% if block.settings.accordianquestion !=  blank %}
             <details name="accordion-demo" {% if forloop.index == 1 %} open{% endif %}>
-              <summary class="accordianheading">{{ block.settings.accordianquestion }}</summary>
+              <summary class="accordianheading"><i class="fa-sharp fa-solid fa-caret-right week_icon"></i>{{ block.settings.accordianquestion }}</summary>
               <div class="customcontent">
-                  {% if block.settings.accordiananswerheading  != blank %} <div class="accordiancontentheading">{{ block.settings.accordiananswerheading }}</div>{% endif %}
+                  {% if block.settings.accordiananswerheading  != blank %} </i><div class="accordiancontentheading">{{ block.settings.accordiananswerheading }}</div>{% endif %}
                   {% if block.settings.accordiananswercontent != blank %}
                     <div class="accordiancontent">
                       {{ block.settings.accordiananswercontent }}
@@ -90,8 +93,17 @@
     border-bottom: 2px solid #808194;
     padding-bottom: 50px;
   }
+  .week_icon{
+    margin-right: 10px;
+  }
   .width50 {
     width: 50%;
+  }
+  .width40 {
+    width: 40%;
+  }
+  .width10 {
+    width: 10%;
   }
   .faceimg {
     width: 100%;
@@ -109,7 +121,9 @@
     font-size: 20px;
     color: #efede9;
   }
-
+ .week_img .w_img{
+  width: 100%;
+ }
   .accordiancontent {
     font-size: 18px;
     color: #ffffff;
@@ -133,6 +147,12 @@
     }
     .width50 {
       width: 100%;
+    }
+    .width40 {
+      width: 85%;
+    }
+    .width10 {
+      width: 15%;
     }
   }
 </style>
