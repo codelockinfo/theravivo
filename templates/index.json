@@ -653,7 +653,9 @@
         "images_eJrfbC": {
           "type": "images",
           "settings": {
+            "beforeimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.19_70931ec8_2.jpg",
             "beforelabel": "Before",
+            "afterimglink": "shopify:\/\/shop_images\/WhatsApp_Image_2024-08-12_at_11.59.25_f757e0bc_1.jpg",
             "afterlabel": "After"
           }
         }
